@@ -9,7 +9,9 @@ function App() {
           <div className="px-10 py-10 bg-gray-100 w-full">
             <h1>NAVBAR</h1>
           </div>
-          <div className="bg-gray-100">
+          <div className="bg-gray-100 grid grid-col-3 w-full">
+            <h1>NAVBAR</h1>
+            <h1>NAVBAR</h1>
             <h1>NAVBAR</h1>
           </div>
         </div>
