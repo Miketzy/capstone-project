@@ -4,6 +4,7 @@
    .all-layout {
   @apply min-h-screen bg-white dark:bg-slate-900 transition-all duration-500;
 }
+
     .layout {
     @apply flex h-screen overflow-hidden
   }
