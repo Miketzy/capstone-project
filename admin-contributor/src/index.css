@@ -3,10 +3,30 @@
 @layer components {
     /*app.js layout*/
    .all-layout{
-  @apply min-h-screen bg-white transition-all duration-500;
+    @apply min-h-screen bg-white transition-all duration-500;
 }
 
     .layout {
-    @apply flex h-screen overflow-hidden
+    @apply flex h-screen overflow-hidden;
   }
+
+ /*sidebar.jsx layout*/
+ .sidebar{
+    @apply transition duration-300 ease-in-out bg-white/80 backdrop-blur-xl border-r border-slate-200/50
+    dark:border-slate-700/50 flex flex-col relative z-10;
+ }
+ .sidebar-logo{
+    @apply p-6 border-b border-slate-200/50 dark:border-slate-700/50;
+ }
+
+ .logo-layout{
+    @apply flex items-center space-x-3;
+ }
+ .logo{
+    @apply w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl 
+    flex items-center justify-center shadow-lg; 
+ }
+.Zap-layout{
+    @apply w-6 h-6 text-white;
+}
 }
