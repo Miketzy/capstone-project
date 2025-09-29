@@ -2,7 +2,7 @@
 
 @layer components {
     /*app.js layout*/
-   .all-layout {
+   .all-layout{
   @apply min-h-screen bg-white dark:bg-slate-900 transition-all duration-500;
 }
 
