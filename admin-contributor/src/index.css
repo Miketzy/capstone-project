@@ -16,7 +16,7 @@
     dark:border-slate-700/50 flex flex-col relative z-10;
  }
  .sidebar-logo{
-    @apply p-2 border-b border-slate-200/50 dark:border-slate-700/50;
+    @apply p-5 border-b border-slate-200/50 dark:border-slate-700/50;
  }
 
  .logo-layout{
