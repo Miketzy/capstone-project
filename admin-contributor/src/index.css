@@ -12,7 +12,7 @@
 
  /*sidebar.jsx layout*/
  .sidebar{
-    @apply transition duration-300 ease-in-out bg-white/80 backdrop-blur-xl border-r border-slate-200/50
+    @apply transition duration-300 ease-in-out bg-[#35e291] backdrop-blur-xl border-r border-slate-200/50
     dark:border-slate-700/50 flex flex-col relative z-10;
  }
  .sidebar-logo{
