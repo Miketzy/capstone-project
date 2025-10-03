@@ -25,7 +25,7 @@ function Sidebar() {
         <nav className="flex-1 p-4 space-y-2 overflow-y-auto"></nav>
 
         {/*user profile*/}
-        <div className="p-4 border-t border-slate-200/50 dark:border-slate-700/50">
+        <div className="p-4 border-t border-[#379564]">
           <div className="flex items-center space-x-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50">
             <img
               src=""
