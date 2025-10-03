@@ -1,3 +1,4 @@
+import Header from "./admin-components/layout/Header";
 import Sidebar from "./admin-components/layout/Sidebar";
 
 function App() {
@@ -6,6 +7,9 @@ function App() {
       <div className="container-layout">
         <div className="layout">
           <Sidebar />
+          <div className="flex-1 flex flex-col overflow-hidden">
+            <Header />
+          </div>
         </div>
       </div>
     </>
