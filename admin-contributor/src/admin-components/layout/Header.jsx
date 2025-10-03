@@ -16,7 +16,7 @@ function Header() {
               <h1 className="text-2xl font-black bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text">
                 <strong>Dashboard</strong>
               </h1>
-              <p className="text-sm bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text">
+              <p className="text-sm bg-white">
                 Wellcome, Michael! we’re glad to have you here{" "}
               </p>
             </div>
@@ -26,7 +26,7 @@ function Header() {
 
           <div className="flex-1 max-w-md mx-8">
             <div className="relative">
-              <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text text-transparent" />
+              <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-[#379564] to-[#22573b]" />
               <input
                 type="text"
                 placeholder="Search Anything"
@@ -38,7 +38,7 @@ function Header() {
               />
               <button
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1.5
-                 text-slate-400 hover:text-slate-600"
+                 text-white hover:text-slate-600"
               >
                 <Filter />
               </button>
