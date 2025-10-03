@@ -11,6 +11,13 @@ function Header() {
             <button className="p-2 rounded-lg text-white hover:ng-slate-100 transition-colors cursor-pointer">
               <Menu className="w-5 h-5 " />
             </button>
+
+            <div className="hidden md:block">
+              <h1 className="text-2xl font-black text-white">
+                <strong>Dashboard</strong>
+              </h1>
+              <p>Wellcome, alex! we’re glad to have you here </p>
+            </div>
           </div>
         </div>
       </div>
