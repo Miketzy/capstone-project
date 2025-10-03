@@ -3,7 +3,7 @@
 @layer components {
     /*app.js layout*/
    .container-layout{
-    @apply min-h-screen bg-white transition-all duration-500;
+    @apply min-h-screen bg-[#d6ffe8] transition-all duration-500;
 }
 
     .layout {
@@ -12,7 +12,7 @@
 
  /*sidebar.jsx layout*/
  .sidebar{
-    @apply transition duration-300 ease-in-out bg-[#35e291] backdrop-blur-xl border-r border-slate-200/50
+    @apply transition duration-300 ease-in-out bg-white backdrop-blur-xl border-r border-slate-200/50
     dark:border-slate-700/50 flex flex-col relative z-10;
  }
  .sidebar-logo{
