@@ -37,9 +37,7 @@ function Sidebar() {
                 <p className="text-sm font-medium text-slate-800 dark:text-white truncate">
                   Michael John G. Margate
                 </p>
-                <p className="text-xs text-slate-500 dark:text-slate-400 truncate">
-                  Administrator
-                </p>
+                <p className="text-xs text-white truncate">Administrator</p>
               </div>
             </div>
           </div>
