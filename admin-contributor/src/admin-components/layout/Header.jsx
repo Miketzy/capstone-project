@@ -13,7 +13,7 @@ function Header() {
             </button>
 
             <div className="hidden md:block">
-              <h1 className="text-2xl font-black text-white">
+              <h1 className="text-2xl font-black bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text">
                 <strong>Dashboard</strong>
               </h1>
               <p>Wellcome, alex! we’re glad to have you here </p>
