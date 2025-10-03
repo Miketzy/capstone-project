@@ -26,7 +26,12 @@ function Header() {
 
           <div className="flex-1 max-w-md mx-8">
             <div className="relative">
-              <Search className="w-4 h-4" />
+              <Search className="w-4 h-4 absolutr left-3 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text " />
+              <input
+                type="text"
+                placeholder="Search Anything"
+                className="w-full pl-10 pr-4 py-2.5 bg-gradient-to-r from-[#379564] to-[#22573b] border-slate-200 txt-white"
+              />
             </div>
           </div>
         </div>
