@@ -26,7 +26,7 @@ function Sidebar() {
 
         {/*user profile*/}
         <div className="p-4 border-t border-slate-200/50">
-          <div className="flex items-center space-x-3 p-3 rounded-xl bg-[#379564]">
+          <div className="flex items-center space-x-3 p-3 rounded-xl bg-gradient-to-r from-[#379564] to-[#22573b]">
             <img
               src=""
               alt="user"
