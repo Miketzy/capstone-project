@@ -34,7 +34,7 @@ function Sidebar() {
             />
             <div className="flex-1 min-2-0">
               <div className="flex-1 min-2-0">
-                <p className="text-sm font-medium text-slate-800 dark:text-white truncate">
+                <p className="text-sm font-medium truncate bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text text-transparent">
                   Michael John G. Margate
                 </p>
                 <p className="text-xs text-white truncate">Administrator</p>
