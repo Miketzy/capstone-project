@@ -13,10 +13,10 @@ function Sidebar() {
 
             {/*Conditional Rendering*/}
             <div>
-              <h1 className="text-xl font-bold text-white ">
+              <h1 className="text-xl font-bold text-black ">
                 <strong>Dav-Or BioExplorer</strong>
               </h1>
-              <p className="text-xs text-white">Admin Panel</p>
+              <p className="text-xs text-black">Admin Panel</p>
             </div>
           </div>
         </div>
