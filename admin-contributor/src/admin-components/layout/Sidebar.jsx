@@ -13,7 +13,7 @@ function Sidebar() {
 
             {/*Conditional Rendering*/}
             <div>
-              <h1 className="text-xl font-bold text-[#0a2315] ">
+              <h1 className="text-xl font-bold text-white ">
                 Dav-Or BioExplorer
               </h1>
               <p className="text-xs text-[#22573b]">Admin Panel</p>
