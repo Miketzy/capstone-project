@@ -16,9 +16,7 @@ function Sidebar() {
               <h1 className="text-xl font-bold text-[#0a2315] ">
                 Dav-Or BioExplorer
               </h1>
-              <p className="text-xs text-slate-500 dark:text-slate-400">
-                Admin Panel
-              </p>
+              <p className="text-xs text-[#22573b]">Admin Panel</p>
             </div>
           </div>
         </div>
