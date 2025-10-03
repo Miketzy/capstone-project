@@ -40,7 +40,7 @@ function Sidebar() {
                   Michael John G. Margate
                 </p>
                 <p className="text-xs text-slate-500 dark:text-slate-400 truncate">
-                  Administration
+                  Administrator
                 </p>
               </div>
             </div>
