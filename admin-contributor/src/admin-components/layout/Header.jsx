@@ -48,8 +48,9 @@ function Header() {
 
           <div className="flex items-center space-x-3">
             {/* toggle */}
-            <div className="p-2.5 rounded xl text-slate-600 hover:bg-slate-100 transition-colors ">
-             <Sun className="w-5 h-5 "/>
+            <button className="p-2.5 rounded xl text-slate-600 hover:bg-slate-100 transition-colors">
+              <Sun className="w-5 h-5 " />
+            </button>
           </div>
         </div>
       </div>
