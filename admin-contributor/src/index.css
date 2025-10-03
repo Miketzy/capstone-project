@@ -3,7 +3,7 @@
 @layer components {
     /*app.js layout*/
    .container-layout{
-    @apply min-h-screen bg-white transition-all duration-500;
+    @apply min-h-screen bg-[#CAFFFF] transition-all duration-500;
 }
 
     .layout {
@@ -29,4 +29,5 @@
 .Zap-layout{
     @apply w-6 h-6 text-white;
 }
+
 }
