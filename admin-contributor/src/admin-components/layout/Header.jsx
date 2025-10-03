@@ -1,4 +1,4 @@
-import { Filter, Menu, Search } from "lucide-react";
+import { Filter, Menu, Plus, Search, Sun } from "lucide-react";
 import React from "react";
 
 function Header() {
@@ -43,6 +43,13 @@ function Header() {
                 <Filter />
               </button>
             </div>
+          </div>
+          {/* Right */}
+
+          <div className="flex items-center space-x-3">
+            {/* toggle */}
+            <div className="p-2.5 rounded xl text-slate-600 hover:bg-slate-100 transition-colors ">
+             <Sun className="w-5 h-5 "/>
           </div>
         </div>
       </div>
