@@ -4,7 +4,7 @@ import React from "react";
 function Header() {
   return (
     <>
-      <div className="bg-[#35e291] backdrop-blur-xl border-b border-slate-200/50 px-6 py-4 h-16">
+      <div className="bg-[#35e291] backdrop-blur-xl border-b border-slate-200/50 px-6 py-4">
         <div className="flex items-center justify-between">
           {/*Left Section */}
           <div className="flex items-center space-x-4">
@@ -13,7 +13,7 @@ function Header() {
             </button>
 
             <div className="hidden md:block">
-              <h1 className="text-2xl font-black bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text ">
+              <h1 className="text-2xl font-black bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text">
                 <strong>Dashboard</strong>
               </h1>
               <p className="text-sm bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text">
