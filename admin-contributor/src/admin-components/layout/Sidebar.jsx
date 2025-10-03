@@ -13,7 +13,7 @@ function Sidebar() {
 
             {/*Conditional Rendering*/}
             <div>
-              <h1 className="text-xl font-bold text-sm font-medium truncate bg-gradient-to-r from-[#379564] to-[#22573b]">
+              <h1 className="text-xl font-bold bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text text-transparent ">
                 Dav-Or BioExplorer
               </h1>
               <p className="text-xs text-white">Admin Panel</p>
