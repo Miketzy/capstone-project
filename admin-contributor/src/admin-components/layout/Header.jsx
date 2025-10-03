@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react";
+import { Menu, Search } from "lucide-react";
 import React from "react";
 
 function Header() {
@@ -19,6 +19,14 @@ function Header() {
               <p className="text-sm bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text">
                 Wellcome, alex! we’re glad to have you here{" "}
               </p>
+            </div>
+          </div>
+
+          {/*Center */}
+
+          <div className="flex-1 max-w-md mx-8">
+            <div className="relative">
+              <Search className="w-4 h-4" />
             </div>
           </div>
         </div>
