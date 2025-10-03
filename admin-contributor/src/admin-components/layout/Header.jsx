@@ -1,4 +1,4 @@
-import { Menu, Search } from "lucide-react";
+import { Filter, Menu, Search } from "lucide-react";
 import React from "react";
 
 function Header() {
@@ -17,7 +17,7 @@ function Header() {
                 <strong>Dashboard</strong>
               </h1>
               <p className="text-sm bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text">
-                Wellcome, alex! we’re glad to have you here{" "}
+                Wellcome, Michael! we’re glad to have you here{" "}
               </p>
             </div>
           </div>
@@ -30,8 +30,15 @@ function Header() {
               <input
                 type="text"
                 placeholder="Search Anything"
-                className="w-full pl-10 pr-4 py-2.5 bg-gradient-to-r from-[#379564] to-[#22573b] border-slate-200 txt-white rounded-xl"
+                className="w-full pl-10 pr-4 py-2.5 border border-slate-200 txt-white rounded-xl text-slate-800
+                placeholder-slate-500 focus:outline-none focus:ring-3 focus:ring-blue-500 focus:border-transparent transition-all"
               />
+              <button
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1.5
+              text-slate-400 hover:text-slate-600 "
+              >
+                <Filter />
+              </button>
             </div>
           </div>
         </div>
