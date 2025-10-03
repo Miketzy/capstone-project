@@ -3,7 +3,9 @@ import React from "react";
 function Header() {
   return (
     <>
-      <div>Header</div>
+      <div className="bg-white/-80 backdrop-blur-xl border-b border-slate-200/50 px-6 py-4">
+        Header
+      </div>
     </>
   );
 }
