@@ -15,7 +15,7 @@ import React from "react";
 function Header() {
   return (
     <>
-      <div className="bg-white backdrop-blur-xl border-b border-slate-200/50 px-6 py-4">
+      <div className="fixed bg-white backdrop-blur-xl border-b border-slate-200/50 px-6 py-4">
         <div className="flex items-center justify-between">
           {/*Left Section */}
 
