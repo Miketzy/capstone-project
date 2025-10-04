@@ -24,7 +24,7 @@ function Header() {
 
           {/*Center */}
 
-          <div className="flex-1 max-w-md mx-8">
+          <div className="flex-1 max-w-md mx-8 hidden md:block">
             <div className="relative">
               <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-white" />
               <input
