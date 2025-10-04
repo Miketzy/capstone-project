@@ -4,7 +4,7 @@ import { Zap } from "lucide-react";
 function Sidebar() {
   return (
     <>
-      <div className="sidebar">
+      <div className="sidebar hidden md:block">
         <div className="sidebar-logo">
           <div className="logo-layout">
             <div className="logo">
