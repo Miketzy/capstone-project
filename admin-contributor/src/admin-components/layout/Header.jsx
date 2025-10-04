@@ -7,11 +7,18 @@ function Header() {
       <div className="bg-white backdrop-blur-xl border-b border-slate-200/50 px-6 py-4">
         <div className="flex items-center justify-between">
           {/*Left Section */}
+
           <div className="flex items-center space-x-4">
             <div className="p-2 rounded-lg">
-              <Sun className="w-5 h-5 block md:hidden" />
+              <Sun className="w-5 h-5" />
             </div>
-            <button className="rounded-lg text-black hover:ng-slate-100 transition-colors cursor-pointer">
+          </div>
+
+          <div className="flex items-center space-x-4">
+            <div className="p-2 rounded-lg">
+              <Sun className="w-5 h-5 block " />
+            </div>
+            <button className="p-2  rounded-lg text-black hover:ng-slate-100 transition-colors cursor-pointer">
               <Menu className="w-5 h-5 " />
             </button>
 
