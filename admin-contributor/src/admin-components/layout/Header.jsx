@@ -11,7 +11,7 @@ function Header() {
             <div className="p-2 rounded-lg">
               <Sun className="w-5 h-5 block md:hidden" />
             </div>
-            <button className="p-2  rounded-lg text-black hover:ng-slate-100 transition-colors cursor-pointer">
+            <button className="rounded-lg text-black hover:ng-slate-100 transition-colors cursor-pointer">
               <Menu className="w-5 h-5 " />
             </button>
 
