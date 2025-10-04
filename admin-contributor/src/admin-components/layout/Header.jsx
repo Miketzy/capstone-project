@@ -20,7 +20,7 @@ function Header() {
           <div className="flex items-center space-x-4 block md:hidden">
             <div className="p-2 rounded-lg">
               <div
-                className="w-6 h-6 bg-gradient-to-r from-[#379564] to-[#22573b] rounded-xl 
+                className="w-8 h-8 bg-gradient-to-r from-[#379564] to-[#22573b] rounded-xl 
     flex items-center justify-center shadow-lg"
               >
                 <Zap className="w-4 h-4 text-white" />
