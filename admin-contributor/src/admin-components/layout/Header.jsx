@@ -9,9 +9,9 @@ function Header() {
           {/*Left Section */}
           <div className="flex items-center space-x-4">
             <div className="p-2 rounded-lg">
-              <Menu className="w-5 h-5 " />
+              <Sun className="w-5 h-5 block md:hidden" />
             </div>
-            <button className="p-2 hidden rounded-lg text-black hover:ng-slate-100 transition-colors cursor-pointer">
+            <button className="p-2  rounded-lg text-black hover:ng-slate-100 transition-colors cursor-pointer">
               <Menu className="w-5 h-5 " />
             </button>
 
