@@ -9,6 +9,7 @@ function App() {
           <Sidebar />
           <div className="flex-1 flex flex-col overflow-hidden">
             <Header />
+            <Header />
           </div>
         </div>
       </div>
