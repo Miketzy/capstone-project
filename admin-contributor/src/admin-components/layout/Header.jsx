@@ -84,7 +84,7 @@ function Header() {
             </button>
 
             <button className="p-2.5 rounded xl text-slate-600 hover:bg-slate-100 transition-colors">
-              <UserCircle className="w-5 h-5 " />
+              <UserCircle className="w-10 h-10 " />
             </button>
           </div>
         </div>
