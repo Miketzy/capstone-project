@@ -28,8 +28,8 @@ function Header() {
             </div>
           </div>
 
-          <div className="flex items-center space-x-4 hidden md:block">
-            <button className="p-2  rounded-lg text-black hover:ng-slate-100 transition-colors cursor-pointer">
+          <div className="flex items-center space-x-4">
+            <button className="p-2 hidden md:block rounded-lg text-black hover:ng-slate-100 transition-colors cursor-pointer">
               <Menu className="w-5 h-5 " />
             </button>
 
