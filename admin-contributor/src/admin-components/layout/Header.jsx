@@ -7,6 +7,7 @@ import {
   Search,
   Sun,
   User,
+  UserCircle,
   Zap,
 } from "lucide-react";
 import React from "react";
@@ -83,7 +84,7 @@ function Header() {
             </button>
 
             <button className="p-2.5 rounded xl text-slate-600 hover:bg-slate-100 transition-colors">
-              <User className="w-5 h-5 " />
+              <UserCircle className="w-5 h-5 " />
             </button>
           </div>
         </div>
