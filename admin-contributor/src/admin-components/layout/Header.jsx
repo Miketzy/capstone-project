@@ -1,13 +1,10 @@
 import {
   Bell,
   Filter,
-  Inbox,
   Menu,
-  Plus,
   Search,
   Settings,
   Sun,
-  User,
   UserCircle,
   Zap,
 } from "lucide-react";

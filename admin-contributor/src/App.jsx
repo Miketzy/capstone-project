@@ -11,9 +11,12 @@ function App() {
             <Header />
           </div>
         </div>
-        <footer className="w-full bg-black text-white text-center py-3 ">
-          © 2025 Dav-Or BioExplorer. All rights reserved.
-        </footer>
+
+        <div className="flex flex-col">
+          <footer className="w-full bg-black text-white text-center py-3 ">
+            © 2025 Dav-Or BioExplorer. All rights reserved.
+          </footer>
+        </div>
       </div>
     </>
   );
