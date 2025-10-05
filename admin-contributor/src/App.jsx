@@ -12,10 +12,12 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-col">
-          <footer className="w-full bg-black text-white text-center py-10 px-6 ">
-            © 2025 Dav-Or BioExplorer. All rights reserved.
-          </footer>
+        <div className="flex flex-col gap-10">
+          <div className="px-10">
+            <footer className="w-full bg-black text-white text-center py-3 ">
+              © 2025 Dav-Or BioExplorer. All rights reserved.
+            </footer>
+          </div>
           <footer className="w-full bg-black text-white text-center py-3 ">
             © 2025 Dav-Or BioExplorer. All rights reserved.
           </footer>
