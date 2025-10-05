@@ -1,4 +1,13 @@
-import { Home } from "lucide-react";
+import {
+  Home,
+  List,
+  Leaf,
+  PlusCircle,
+  MessageSquare,
+  BarChart3,
+  Users,
+  Image,
+} from "lucide-react";
 import Header from "./admin-components/layout/Header";
 import Sidebar from "./admin-components/layout/Sidebar";
 
@@ -23,22 +32,22 @@ function App() {
                 <Home className="w-6 h-6 text-[#22573b]" />
               </button>
               <button className="relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors">
-                <Home className="w-6 h-6 text-[#22573b]" />
+                <Leaf className="w-6 h-6 text-[#22573b]" />
               </button>
               <button className="relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors">
-                <Home className="w-6 h-6 text-[#22573b]" />
+                <List className="w-6 h-6 text-[#22573b]" />
               </button>
               <button className="relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors">
-                <Home className="w-6 h-6 text-[#22573b]" />
+                <BarChart3 className="w-6 h-6 text-[#22573b]" />
               </button>
               <button className="relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors">
-                <Home className="w-6 h-6 text-[#22573b]" />
+                <PlusCircle className="w-6 h-6 text-[#22573b]" />
               </button>
               <button className="relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors">
-                <Home className="w-6 h-6 text-[#22573b]" />
+                <MessageSquare className="w-6 h-6 text-[#22573b]" />
               </button>
               <button className="relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors">
-                <Home className="w-6 h-6 text-[#22573b]" />
+                <Image className="w-6 h-6 text-[#22573b]" />
               </button>
             </div>
           </div>
