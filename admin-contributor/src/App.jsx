@@ -38,7 +38,11 @@ function App() {
                     : "text-slate-600 hover:bg-slate-100"
                 }`}
               >
-                <LayoutDashboard className="w-6 h-6 text-[#22573b]" />
+                <LayoutDashboard
+                  className={`w-6 h-6 transition-colors ${
+                    active ? "text-white" : "text-[#22573b]"
+                  }`}
+                />
               </button>
               <button className="relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors">
                 <Leaf className="w-6 h-6 text-[#22573b]" />
