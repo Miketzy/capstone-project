@@ -16,9 +16,9 @@ function App() {
           </div>
         </div>
 
-        <div className="grid grid-cols-10 block md:hidden">
+        <div className="grid grid-cols-7 block md:hidden">
           <div className="fixed bottom-0 left-0 z-40 w-full bg-white text-black text-center py-3 border-t border-slate-200 shadow-md">
-            {[...Array(10)].map((_, i) => (
+            {[...Array(7)].map((_, i) => (
               <Home key={i} className="w-5 h-5 text-[#22573b]" />
             ))}
           </div>
