@@ -82,6 +82,11 @@ function Header() {
                 3
               </span>
             </button>
+
+            {/*user Profile */}
+            <div className="flex items-center space-x-3 pl-3 border-l border-slate-200 ">
+              <UserCircle className="w-8 h-8 rounded-full ring-2 ring-blue-500" />
+            </div>
           </div>
         </div>
       </div>
