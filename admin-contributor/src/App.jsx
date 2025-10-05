@@ -12,8 +12,8 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-10">
-          <div className="px-10">
+        <div className="flex flex-col">
+          <div className="px-6">
             <footer className="w-full bg-black text-white text-center py-3 ">
               © 2025 Dav-Or BioExplorer. All rights reserved.
             </footer>
