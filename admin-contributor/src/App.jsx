@@ -1,3 +1,4 @@
+import { Home } from "lucide-react";
 import Header from "./admin-components/layout/Header";
 import Sidebar from "./admin-components/layout/Sidebar";
 
@@ -19,6 +20,7 @@ function App() {
           <div className="fixed bottom-0 left-0 z-40 w-full bg-white text-black text-center py-3 border-t border-slate-200 shadow-md">
             <div className="flex items-center justify-center space-x-2">
               <Home className="w-5 h-5 text-[#22573b]" />
+
               <span className="text-sm font-medium">Home</span>
             </div>
           </div>
