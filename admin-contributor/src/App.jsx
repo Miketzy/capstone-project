@@ -16,8 +16,11 @@ function App() {
         </div>
 
         <div className="grid grid-cols-1 block md:hidden">
-          <div className="px-6 block md:hidden fixed bottom-0 left-0 z-40 w-full bg-white text-black text-center py-3">
-            hi
+          <div className="fixed bottom-0 left-0 z-40 w-full bg-white text-black text-center py-3 border-t border-slate-200 shadow-md">
+            <div className="flex items-center justify-center space-x-2">
+              <Home className="w-5 h-5 text-[#22573b]" />
+              <span className="text-sm font-medium">Home</span>
+            </div>
           </div>
         </div>
       </div>
