@@ -15,11 +15,9 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-col">
-          <div className="px-6 block md:hidden">
-            <footer className="fixed bottom-0 left-0 z-40 w-full bg-white text-black text-center py-3 ">
-              © 2025 Dav-Or BioExplorer. All rights reserved.
-            </footer>
+        <div className="grid grid-cols-1">
+          <div className="px-6 block md:hidden fixed bottom-0 left-0 z-40 w-full bg-white text-black text-center py-3">
+            hi
           </div>
         </div>
       </div>
