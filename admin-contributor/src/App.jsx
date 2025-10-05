@@ -9,10 +9,10 @@ function App() {
           <Sidebar />
           <div className="flex-1 flex flex-col ">
             <Header />
-            <footer className="bottom-0 left-0  w-full h-80 bg-black text-white text-center py-3 ">
-              © 2025 Dav-Or BioExplorer. All rights reserved.
-            </footer>
           </div>
+          <footer className="bottom-0 left-0  w-full h-80 bg-black text-white text-center py-3 ">
+            © 2025 Dav-Or BioExplorer. All rights reserved.
+          </footer>
         </div>
 
         <div className="flex flex-col">
