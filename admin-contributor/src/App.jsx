@@ -18,7 +18,7 @@ function App() {
               © 2025 Dav-Or BioExplorer. All rights reserved.
             </footer>
           </div>
-          <footer className="w-full bg-black text-white text-center py-3 ">
+          <footer className="w-full h-80 bg-black text-white text-center py-3 ">
             © 2025 Dav-Or BioExplorer. All rights reserved.
           </footer>
         </div>
