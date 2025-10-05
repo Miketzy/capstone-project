@@ -13,7 +13,17 @@ import Sidebar from "./admin-components/layout/Sidebar";
 import { useState } from "react";
 
 function App() {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState("dashboard");
+
+  const navItems = [
+    { id: "dashboard", icon: LayoutDashboard },
+    { id: "add species", icon: Leaf },
+    { id: "list", icon: List },
+    { id: "Analytic", icon: BarChart3 },
+    { id: "createQuestion", icon: PlusCircle },
+    { id: "contributorRequest", icon: MessageSquare },
+    { id: "gallery", icon: Image },
+  ];
   return (
     <>
       <div className="container-layout">
@@ -30,38 +40,23 @@ function App() {
         <div className="block md:hidden">
           <div className="fixed bottom-0 left-0 z-40 w-full bg-white text-black text-center py-3 border-t border-slate-200 shadow-md">
             <div className="grid grid-cols-7 place-items-center py-3 px-5">
-              <button
-                onClick={() => setActive(!active)}
-                className={`relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors transition-all duration-300 ${
-                  active
-                    ? "bg-gradient-to-r from-[#379564] to-[#22573b]"
-                    : "text-slate-600 hover:bg-slate-100"
-                }`}
-              >
-                <LayoutDashboard
-                  className={`w-6 h-6 transition-colors ${
-                    active ? "text-white" : "text-[#22573b]"
+              {navItems.map(({ id, icon: Icon }) => (
+                <button
+                  key={id}
+                  onClick={() => setActive(id)}
+                  className={`relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors transition-all duration-300 ${
+                    active === id
+                      ? "bg-gradient-to-r from-[#379564] to-[#22573b]"
+                      : "hover:bg-slate-100"
                   }`}
-                />
-              </button>
-              <button className="relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors">
-                <Leaf className="w-6 h-6 text-[#22573b]" />
-              </button>
-              <button className="relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors">
-                <List className="w-6 h-6 text-[#22573b]" />
-              </button>
-              <button className="relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors">
-                <BarChart3 className="w-6 h-6 text-[#22573b]" />
-              </button>
-              <button className="relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors">
-                <PlusCircle className="w-6 h-6 text-[#22573b]" />
-              </button>
-              <button className="relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors">
-                <MessageSquare className="w-6 h-6 text-[#22573b]" />
-              </button>
-              <button className="relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors">
-                <Image className="w-6 h-6 text-[#22573b]" />
-              </button>
+                >
+                  <Icon
+                    className={`w-6 h-6 ${
+                      active === id ? "text-white" : "text-[#22573b]"
+                    }`}
+                  />
+                </button>
+              ))}
             </div>
           </div>
         </div>
