@@ -18,14 +18,14 @@ function App() {
 
         <div className="block md:hidden">
           <div className="fixed bottom-0 left-0 z-40 w-full bg-white text-black text-center py-3 border-t border-slate-200 shadow-md">
-            <div className="flex items-center justify-center space-x-2">
-              <Home className="w-5 h-5 text-[#22573b]" />
-              <Home className="w-5 h-5 text-[#22573b]" />
-              <Home className="w-5 h-5 text-[#22573b]" />
-              <Home className="w-5 h-5 text-[#22573b]" />
-              <Home className="w-5 h-5 text-[#22573b]" />
-              <Home className="w-5 h-5 text-[#22573b]" />
-              <Home className="w-5 h-5 text-[#22573b]" />
+            <div className="grid grid-cols-7 place-items-center py-3">
+              <Home className="w-6 h-6 text-[#22573b]" />
+              <Home className="w-6 h-6 text-[#22573b]" />
+              <Home className="w-6 h-6 text-[#22573b]" />
+              <Home className="w-6 h-6 text-[#22573b]" />
+              <Home className="w-6 h-6 text-[#22573b]" />
+              <Home className="w-6 h-6 text-[#22573b]" />
+              <Home className="w-6 h-6 text-[#22573b]" />
             </div>
           </div>
         </div>
