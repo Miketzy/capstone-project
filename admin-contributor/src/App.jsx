@@ -15,7 +15,7 @@ function App() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1">
+        <div className="grid grid-cols-1 block md:hidden">
           <div className="px-6 block md:hidden fixed bottom-0 left-0 z-40 w-full bg-white text-black text-center py-3">
             hi
           </div>
