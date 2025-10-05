@@ -13,7 +13,7 @@ function App() {
         </div>
 
         <div className="flex flex-col">
-          <footer className="w-full bg-black text-white text-center py-3 ">
+          <footer className="w-full bg-black text-white text-center py-10 px-6 ">
             © 2025 Dav-Or BioExplorer. All rights reserved.
           </footer>
           <footer className="w-full bg-black text-white text-center py-3 ">
