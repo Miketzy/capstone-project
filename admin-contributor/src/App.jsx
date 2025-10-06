@@ -1,6 +1,7 @@
 import Header from "./admin-components/layout/Header";
 import Sidebar from "./admin-components/layout/Sidebar";
 import Navbar from "./admin-components/icon-navbar/Navbar";
+import Footer from "./admin-components/footer/Footer";
 
 function App() {
   return (
@@ -10,9 +11,7 @@ function App() {
           <Sidebar />
           <div className="flex-1 flex flex-col ">
             <Header />
-            <footer className="w-full bg-black text-white text-center py-3 ">
-              © 2025 Dav-Or BioExplorer. All rights reserved.
-            </footer>
+            <Footer />
           </div>
         </div>
 
