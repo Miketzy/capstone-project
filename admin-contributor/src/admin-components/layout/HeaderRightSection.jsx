@@ -7,7 +7,6 @@ import {
   Settings,
   Sun,
   UserCircle,
-  Zap,
 } from "lucide-react";
 
 function HeaderRightSection() {

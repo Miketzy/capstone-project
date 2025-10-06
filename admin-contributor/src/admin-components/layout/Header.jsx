@@ -1,13 +1,3 @@
-import {
-  Bell,
-  Filter,
-  Menu,
-  Search,
-  Settings,
-  Sun,
-  UserCircle,
-  Zap,
-} from "lucide-react";
 import React from "react";
 import HeaderLeftSection from "./HeaderLeftSection";
 import HeaderCenterSection from "./HeaderCenterSection";
