@@ -1,27 +1,12 @@
-import React from "react";
-import { Zap } from "lucide-react";
 import UserProfile from "./UserProfile";
+import Logo from "./Logo";
 
 function Sidebar() {
   return (
     <>
       <div className="sidebar hidden md:flex sticky top-0 z-40">
         <div className="sidebar-logo">
-          <div className="logo-layout">
-            <div className="logo">
-              <Zap className="Zap-layout" />
-            </div>
-
-            {/*Conditional Rendering*/}
-            <div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text ">
-                <strong>Dav-Or BioExplorer</strong>
-              </h1>
-              <p className="text-xs bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text ">
-                Admin Panel
-              </p>
-            </div>
-          </div>
+          <Logo />
         </div>
 
         {/*Navigation display a dynamic menu*/}
