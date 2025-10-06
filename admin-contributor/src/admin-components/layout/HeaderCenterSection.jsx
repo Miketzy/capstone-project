@@ -1,5 +1,5 @@
 import React from "react";
-import { Filter } from "lucide-react";
+import { Filter, Search } from "lucide-react";
 
 function HeaderCenterSection() {
   return (
