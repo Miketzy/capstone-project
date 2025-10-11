@@ -56,9 +56,11 @@ function SidebarMenu() {
               >
                 {item.label}
               </span>
-              <span className="px-2 py-1 text-xs bg-red-500 text-white rounded-full ">
-                {item.count}
-              </span>
+              {item.count && (
+                <span className="px-2 py-1 text-xs bg-red-500 text-white rounded-full ">
+                  {item.count}
+                </span>
+              )}
             </div>
           </button>
         </div>
