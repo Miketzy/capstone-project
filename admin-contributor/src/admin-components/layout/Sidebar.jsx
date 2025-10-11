@@ -1,5 +1,6 @@
 import UserProfile from "./UserProfile";
 import Logo from "./Logo";
+import SidebarMenu from "./SidebarMenu";
 
 function Sidebar() {
   return (
@@ -10,7 +11,9 @@ function Sidebar() {
         </div>
 
         {/*Navigation display a dynamic menu*/}
-        <nav className="flex-1 p-4 space-y-2 overflow-y-auto"></nav>
+        <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
+          <SidebarMenu />
+        </nav>
 
         {/*user profile*/}
         <div className="p-4 border-t border-slate-200/50">
