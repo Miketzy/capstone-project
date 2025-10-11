@@ -35,7 +35,7 @@ function SidebarMenu() {
             onClick={() => setActive(item.id)}
             className={`group w-full flex items-center justify-between p-3 rounded-xl transition-all duration-200 cursor-pointer ${
               active === item.id
-                ? "bg-gradient-to-r from-[#379564] to-[#22573b] text-white "
+                ? "bg-gradient-to-r from-[#379564] to-[#22573b] text-white shadow-md"
                 : "hover:bg-gradient-to-r hover:from-[#379564] hover:to-[#22573b] hover:text-white"
             }`}
           >
