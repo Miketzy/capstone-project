@@ -13,7 +13,7 @@ function SidebarMenu() {
   const [active, setActive] = useState("dashboard");
 
   const menuItems = [
-    { id: "dashboard", icon: LayoutDashboard, label: "Dashboard" },
+    { id: "dashboard", icon: LayoutDashboard, label: "Species Directory" },
     { id: "add", icon: Leaf, label: "Add Species" },
     { id: "list", icon: List, label: "List of Species" },
     { id: "analytics", icon: BarChart3, label: "Analytics" },
@@ -22,7 +22,7 @@ function SidebarMenu() {
       id: "request",
       icon: MessageSquare,
       label: "Contributor Request",
-      count: "1",
+      count: "10",
     },
     { id: "gallery", icon: Image, label: "Gallery" },
   ];
