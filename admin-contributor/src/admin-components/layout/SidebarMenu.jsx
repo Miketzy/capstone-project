@@ -44,14 +44,14 @@ function SidebarMenu() {
                 className={`w-5 h-5  ${
                   active === item.id
                     ? "text-white"
-                    : "text-gray-600 group-hover:text-white"
+                    : "text-black group-hover:text-white"
                 }`}
               />
               <span
                 className={`font-medium  ml-2 ${
                   active === item.id
                     ? "text-white"
-                    : "text-gray-800 group-hover:text-white"
+                    : "text-black group-hover:text-white"
                 }`}
               >
                 {item.label}
