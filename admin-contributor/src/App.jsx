@@ -11,7 +11,9 @@ function App() {
           <Sidebar />
           <div className="flex-1 flex flex-col ">
             <Header />
-            <Footer />
+            <main>
+              <Footer />
+            </main>
           </div>
         </div>
 
