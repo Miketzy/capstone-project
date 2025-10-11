@@ -18,7 +18,12 @@ function SidebarMenu() {
     { id: "list", icon: List, label: "List of Species" },
     { id: "analytics", icon: BarChart3, label: "Analytics" },
     { id: "create", icon: PlusCircle, label: "Create Question" },
-    { id: "request", icon: MessageSquare, label: "Contributor Request" },
+    {
+      id: "request",
+      icon: MessageSquare,
+      label: "Contributor Request",
+      count: "1",
+    },
     { id: "gallery", icon: Image, label: "Gallery" },
   ];
 
@@ -36,20 +41,23 @@ function SidebarMenu() {
           >
             <div className="flex items-center space-x-3">
               <item.icon
-                className={`w-5 h-5 transition-colors duration-200 ${
+                className={`w-5 h-5  ${
                   active === item.id
                     ? "text-white"
                     : "text-gray-600 group-hover:text-white"
                 }`}
               />
               <span
-                className={`font-medium transition-colors duration-200 ${
+                className={`font-medium  ml-2 ${
                   active === item.id
                     ? "text-white"
                     : "text-gray-800 group-hover:text-white"
                 }`}
               >
                 {item.label}
+              </span>
+              <span className="px-2 py-1 text-xs bg-red-500 text-white rounded-full ">
+                {item.count}
               </span>
             </div>
           </button>
