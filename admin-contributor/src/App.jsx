@@ -14,6 +14,21 @@ function App() {
             <Header />
             <main className="flex-1 overflow-y-auto">
               <Footer />
+              <Footer />
+              <Footer />
+              <Footer />
+              <Footer />
+              <Footer />
+              <Footer />
+              <Footer />
+              <Footer />
+              <Footer />
+              <Footer />
+              <Footer />
+              <Footer />
+              <Footer />
+              <Footer />
+              <Footer />
             </main>
           </div>
         </div>
