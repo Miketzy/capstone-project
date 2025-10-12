@@ -5,23 +5,13 @@ import Footer from "./admin-components/footer/Footer";
 import { useState } from "react";
 
 function App() {
-  const [sidebarCollapsed, setSideBarCollapsed] = useState(false);
-  const [currentPage, setCurrentPage] = useState("dashboard");
   return (
     <>
       <div className="container-layout">
         <div className="layout">
-          <Sidebar
-            collapsed={sidebarCollapsed}
-            onToggle={() => setSideBarCollapsed(!sidebarCollapsed)}
-            currentPage={currentPage}
-            onPageChange={setCurrentPage}
-          />
+          <Sidebar />
           <div className="flex-1 flex flex-col ">
-            <Header
-              sidebarCollapsed={sidebarCollapsed}
-              onToggleSidebar={() => setSideBarCollapsed(!sidebarCollapsed)}
-            />
+            <Header />
             <main>
               <Footer />
             </main>

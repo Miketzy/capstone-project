@@ -47,17 +47,15 @@ function SidebarMenu({ collapsed }) {
                     : "text-black group-hover:text-white"
                 }`}
               />
-              {!collapsed && (
-                <span
-                  className={`font-medium  ml-2 ${
-                    active === item.id
-                      ? "text-white"
-                      : "text-black group-hover:text-white"
-                  }`}
-                >
-                  {item.label}
-                </span>
-              )}
+              <span
+                className={`font-medium  ml-2 ${
+                  active === item.id
+                    ? "text-white"
+                    : "text-black group-hover:text-white"
+                }`}
+              >
+                {item.label}
+              </span>
 
               {item.count && (
                 <span className="px-2 py-1 text-xs bg-red-500 text-white rounded-full ">

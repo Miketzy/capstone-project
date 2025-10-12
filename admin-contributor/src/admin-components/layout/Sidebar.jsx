@@ -3,26 +3,12 @@ import Logo from "./Logo";
 import SidebarMenu from "./SidebarMenu";
 import { useState } from "react";
 
-function Sidebar({ collapsed, onToggle, currentPage, onPageChange }) {
-  const [expandedItem, setExpandedItem] = useState(new Set(["analytics"]));
-
-  const toggleExpanded = (itemid) => {
-    const newExpanded = new Set(expandedItem);
-    if (newExpanded.has(itemid)) {
-      newExpanded.delete(itemid);
-    } else {
-      newExpanded.add(itemid);
-    }
-
-    setExpandedItem(newExpanded);
-  };
+function Sidebar() {
   return (
     <>
       <div
-        className={`${
-          collapsed ? "w-20" : "w-72"
-        } transition duration-300 ease-in-out bg-white backdrop-blur-xl border-r border-slate-200/50
-  flex flex-col relative hidden md:block  z-10`}
+        className="w-72 transition duration-300 ease-in-out bg-white backdrop-blur-xl border-r border-slate-200/50
+  flex flex-col relative hidden md:block  z-10"
       >
         <div className="sidebar-logo">
           <Logo />

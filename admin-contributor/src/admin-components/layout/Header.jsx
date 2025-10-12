@@ -3,7 +3,7 @@ import HeaderLeftSection from "./HeaderLeftSection";
 import HeaderCenterSection from "./HeaderCenterSection";
 import HeaderRightSection from "./HeaderRightSection";
 
-function Header({ sidebarCollapsed, onToggleSidebar }) {
+function Header() {
   return (
     <>
       <div className="sticky top-0 z-40 bg-white backdrop-blur-xl border-b border-slate-200/50 px-6 py-4">
