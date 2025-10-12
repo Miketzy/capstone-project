@@ -18,8 +18,11 @@ function HeaderLeftSection({ sidebarCollapsed, onToggleSidebar }) {
 
       <div className="flex items-center space-x-4">
         <button
-          className="p-2 rounded-lg text-black hover:ng-slate-100 transition-colors cursor-pointer"
-          onClick={onToggleSidebar}
+          className="p-2 hidden md:block rounded-lg text-black hover:ng-slate-100 transition-colors cursor-pointer"
+          onClick={() => {
+            console.log("Sidebar toggle clicked!");
+            onToggleSidebar();
+          }}
         >
           <Menu className="w-5 h-5 " />
         </button>
