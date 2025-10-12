@@ -1,8 +1,21 @@
 import UserProfile from "./UserProfile";
 import Logo from "./Logo";
 import SidebarMenu from "./SidebarMenu";
+import { useState } from "react";
 
 function Sidebar({ collapsed, onToggle, currentPage, onPageChange }) {
+  const [expandedItem, setExpandedItem] = useState(new Set(["analytics"]));
+
+  const toggleExpanded = (itemid) => {
+    const newExpanded = new Set(expandedItem);
+    if (newExpanded.has(itemid)) {
+      newExpanded.delete(itemid);
+    } else {
+      newExpanded.add(itemid);
+    }
+
+    setExpandedItem(newExpanded);
+  };
   return (
     <>
       <div
@@ -21,9 +34,11 @@ function Sidebar({ collapsed, onToggle, currentPage, onPageChange }) {
         </nav>
 
         {/*user profile*/}
-        <div className="p-4 border-t border-slate-200/50">
-          <UserProfile />
-        </div>
+        {!collapsed && (
+          <div className="p-4 border-t border-slate-200/50">
+            <UserProfile />
+          </div>
+        )}
       </div>
     </>
   );
