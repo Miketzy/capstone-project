@@ -4,6 +4,7 @@ import Navbar from "./admin-components/icon-navbar/Navbar";
 import Footer from "./admin-components/footer/Footer";
 import { useState } from "react";
 import Dashboard from "./admin-components/dashboard/Dashboard";
+import AddSpecies from "./admin-components/add-species/AddSpecies";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("dashboard");
@@ -17,6 +18,7 @@ function App() {
             <main className="flex-1 overflow-y-auto bg-transparent">
               <div className="p-6 space-y-6 ">
                 {currentPage === "dashboard" && <Dashboard />}
+                {currentPage === "addspecies" && <AddSpecies />}
               </div>
               <Footer />
             </main>
