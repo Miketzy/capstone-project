@@ -48,7 +48,7 @@ function SidebarMenu() {
                 }`}
               />
               <span
-                className={`font-medium  ml-2 hidden lg-inline ${
+                className={`font-medium  ml-2 hidden lg-block ${
                   active === item.id
                     ? "text-white"
                     : "text-black group-hover:text-white"
