@@ -8,6 +8,8 @@ import AddSpecies from "./admin-components/add-species/AddSpecies";
 import List from "./admin-components/list-species/List";
 import Analytics from "./admin-components/analytics/Analytics";
 import Create from "./admin-components/createQuest/Create";
+import Gallery from "./admin-components/gallery/Gallery";
+import ContributorRequest from "./admin-components/contributorRequest/ContributorRequest";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("dashboard");
@@ -25,8 +27,8 @@ function App() {
                 {currentPage === "list" && <List />}
                 {currentPage === "analytics" && <Analytics />}
                 {currentPage === "create" && <Create />}
-                {currentPage === "request" && <List />}
-                {currentPage === "gallery" && <List />}
+                {currentPage === "request" && <ContributorRequest />}
+                {currentPage === "gallery" && <Gallery />}
               </div>
               <Footer />
             </main>
