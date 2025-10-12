@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import React, { useState } from "react";
 
-function SidebarMenu() {
+function SidebarMenu({ collapsed }) {
   const [active, setActive] = useState("dashboard");
 
   const menuItems = [
@@ -47,15 +47,18 @@ function SidebarMenu() {
                     : "text-black group-hover:text-white"
                 }`}
               />
-              <span
-                className={`font-medium  ml-2 ${
-                  active === item.id
-                    ? "text-white"
-                    : "text-black group-hover:text-white"
-                }`}
-              >
-                {item.label}
-              </span>
+              {!collapsed && (
+                <span
+                  className={`font-medium  ml-2 ${
+                    active === item.id
+                      ? "text-white"
+                      : "text-black group-hover:text-white"
+                  }`}
+                >
+                  {item.label}
+                </span>
+              )}
+
               {item.count && (
                 <span className="px-2 py-1 text-xs bg-red-500 text-white rounded-full ">
                   {item.count}

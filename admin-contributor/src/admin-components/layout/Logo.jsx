@@ -1,7 +1,7 @@
 import React from "react";
 import { Zap } from "lucide-react";
 
-function Logo() {
+function Logo({ collapsed, onToggle, currentPage, onPageChange }) {
   return (
     <>
       <div className="logo-layout">
@@ -10,14 +10,16 @@ function Logo() {
         </div>
 
         {/*Conditional Rendering*/}
-        <div>
-          <h1 className="text-xl font-bold bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text ">
-            <strong>Dav-Or BioExplorer</strong>
-          </h1>
-          <p className="text-xs bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text ">
-            Admin Panel
-          </p>
-        </div>
+        {!collapsed && (
+          <div>
+            <h1 className="text-xl font-bold bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text ">
+              <strong>Dav-Or BioExplorer</strong>
+            </h1>
+            <p className="text-xs bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text ">
+              Admin Panel
+            </p>
+          </div>
+        )}
       </div>
     </>
   );
