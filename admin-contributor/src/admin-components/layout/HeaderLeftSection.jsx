@@ -17,10 +17,6 @@ function HeaderLeftSection() {
       </div>
 
       <div className="flex items-center space-x-4">
-        <button className="p-2 hidden md:block rounded-lg text-black hover:ng-slate-100 transition-colors cursor-pointer">
-          <Menu className="w-5 h-5 " />
-        </button>
-
         <div className="hidden md:block">
           <h1 className="text-2xl font-black bg-gradient-to-r from-[#379564] to-[#22573b] bg-clip-text">
             <strong>Dashboard</strong>

@@ -9,10 +9,8 @@ function Header({ sidebarCollapsed, onToggleSidebar }) {
       <div className="sticky top-0 z-40 bg-white backdrop-blur-xl border-b border-slate-200/50 px-6 py-4">
         <div className="flex items-center justify-between">
           {/*Left Section */}
-          <HeaderLeftSection
-            sidebarCollapsed={sidebarCollapsed}
-            onToggleSidebar={onToggleSidebar}
-          />
+          <HeaderLeftSection />
+
           {/*Center */}
           <div className="flex-1 max-w-md mx-8 hidden md:block">
             <HeaderCenterSection />
