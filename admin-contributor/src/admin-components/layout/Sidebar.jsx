@@ -7,7 +7,7 @@ function Sidebar() {
   return (
     <>
       <div
-        className="w-72 transition duration-300 ease-in-out bg-white backdrop-blur-xl border-r border-slate-200/50
+        className="w-72 md:w-20 transition duration-300 ease-in-out bg-white backdrop-blur-xl border-r border-slate-200/50
   flex flex-col relative hidden md:block  z-10"
       >
         <div className="sidebar-logo">
