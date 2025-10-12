@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import React, { useState } from "react";
 
-function SidebarMenu({ collapsed }) {
+function SidebarMenu() {
   const [active, setActive] = useState("dashboard");
 
   const menuItems = [
