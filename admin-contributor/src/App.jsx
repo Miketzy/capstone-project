@@ -36,7 +36,7 @@ function App() {
         </div>
 
         <div className="block md:hidden">
-          <Navbar />
+          <Navbar currentPage={currentPage} onPageChange={setCurrentPage} />
         </div>
       </div>
     </>
