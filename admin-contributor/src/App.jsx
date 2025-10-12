@@ -12,7 +12,7 @@ function App() {
           <Sidebar />
           <div className="flex-1 flex flex-col ">
             <Header />
-            <main>
+            <main className="flex-1 overflow-y-auto">
               <Footer />
             </main>
           </div>
