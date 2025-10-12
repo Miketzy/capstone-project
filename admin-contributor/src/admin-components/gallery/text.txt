@@ -1,3 +1,4 @@
+
 import {
   BarChart3,
   Image,
@@ -5,12 +6,13 @@ import {
   Leaf,
   List,
   MessageSquare,
-  PawPrint,
   PlusCircle,
 } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 
-function SidebarMenu({ currentPage, onPageChange }) {
+function SidebarMenu() {
+  const [active, setActive] = useState("dashboard");
+
   const menuItems = [
     { id: "dashboard", icon: LayoutDashboard, label: "Species Directory" },
     { id: "add", icon: Leaf, label: "Add Species" },
@@ -31,9 +33,9 @@ function SidebarMenu({ currentPage, onPageChange }) {
       {menuItems.map((item) => (
         <div key={item.id}>
           <button
-            onClick={() => onPageChange(item.id)} // 🔥 calls parent function
+            onClick={() => setActive(item.id)}
             className={`group w-full flex items-center justify-between p-3 rounded-xl transition-all duration-200 cursor-pointer ${
-              currentPage === item.id
+              active === item.id
                 ? "bg-gradient-to-r from-[#379564] to-[#22573b] text-white shadow-md"
                 : "hover:bg-gradient-to-r hover:from-[#379564] hover:to-[#22573b] hover:text-white"
             }`}
@@ -42,7 +44,7 @@ function SidebarMenu({ currentPage, onPageChange }) {
               {/* Icon */}
               <item.icon
                 className={`w-5 h-5 ${
-                  currentPage === item.id
+                  active === item.id
                     ? "text-white"
                     : "text-black group-hover:text-white"
                 }`}
@@ -58,7 +60,7 @@ function SidebarMenu({ currentPage, onPageChange }) {
               {/* Label */}
               <span
                 className={`font-medium ml-2 hidden lg:inline ${
-                  currentPage === item.id
+                  active === item.id
                     ? "text-white"
                     : "text-black group-hover:text-white"
                 }`}
@@ -73,14 +75,6 @@ function SidebarMenu({ currentPage, onPageChange }) {
                 </span>
               )}
             </div>
-            <PawPrint
-              className={`absolute right-3 w-4 h-4 opacity-0 translate-y-2 transition-all duration-300
-                ${
-                  currentPage === item.id
-                    ? "opacity-100 translate-y-0 text-white"
-                    : "group-hover:opacity-100 group-hover:translate-y-0 text-white/60"
-                }`}
-            />
           </button>
         </div>
       ))}
@@ -89,3 +83,74 @@ function SidebarMenu({ currentPage, onPageChange }) {
 }
 
 export default SidebarMenu;
+
+
+
+
+
+
+
+
+
+
+
+
+
+import {
+  LayoutDashboard,
+  List,
+  Leaf,
+  PlusCircle,
+  MessageSquare,
+  BarChart3,
+  Users,
+  Image,
+} from "lucide-react";
+import { useState } from "react";
+function Navbar() {
+  const [active, setActive] = useState("dashboard");
+
+  const navItems = [
+    { id: "dashboard", icon: LayoutDashboard },
+    { id: "add species", icon: Leaf },
+    { id: "list", icon: List },
+    { id: "Analytic", icon: BarChart3 },
+    { id: "createQuestion", icon: PlusCircle },
+    { id: "contributorRequest", icon: MessageSquare },
+    { id: "gallery", icon: Image },
+  ];
+  return (
+    <>
+      <div className="fixed bottom-0 left-0 z-40 w-full bg-white text-black text-center py-3 border-t border-slate-200 shadow-md">
+        <div className="grid grid-cols-7 place-items-center py-3 px-5">
+          {navItems.map(({ id, icon: Icon }) => (
+            <button
+              key={id}
+              onClick={() => setActive(id)}
+              className={`relative p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors transition-all duration-300 ${
+                active === id
+                  ? "bg-gradient-to-r from-[#379564] to-[#22573b]"
+                  : "hover:bg-slate-100"
+              }`}
+            >
+              <Icon
+                className={`w-6 h-6 ${
+                  active === id ? "text-white" : "text-[#22573b]"
+                }`}
+              />
+            </button>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Navbar;
+
+
+
+
+
+
+
