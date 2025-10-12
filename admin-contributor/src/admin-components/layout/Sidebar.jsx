@@ -2,10 +2,14 @@ import UserProfile from "./UserProfile";
 import Logo from "./Logo";
 import SidebarMenu from "./SidebarMenu";
 
-function Sidebar() {
+function Sidebar({ collapsed, onToggle, currentPage, onPageChange }) {
   return (
     <>
-      <div className="sidebar hidden md:flex sticky top-0 z-40">
+      <div
+        className={`${
+          collapsed ? "w-20" : "72"
+        }sidebar hidden md:flex sticky top-0 z-40`}
+      >
         <div className="sidebar-logo">
           <Logo />
         </div>
