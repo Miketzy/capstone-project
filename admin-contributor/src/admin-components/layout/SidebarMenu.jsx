@@ -39,16 +39,26 @@ function SidebarMenu() {
                 : "hover:bg-gradient-to-r hover:from-[#379564] hover:to-[#22573b] hover:text-white"
             }`}
           >
-            <div className="flex items-center space-x-3">
+            <div className="relative flex items-center space-x-3">
+              {/* Icon */}
               <item.icon
-                className={`w-5 h-5  ${
+                className={`w-5 h-5 ${
                   active === item.id
                     ? "text-white"
                     : "text-black group-hover:text-white"
                 }`}
               />
+
+              {/* Badge for md and smaller */}
+              {item.count && (
+                <span className="absolute -top-1 -right-1 text-xs bg-red-500 text-white px-1.5 py-0.5 rounded-full lg:hidden">
+                  {item.count}
+                </span>
+              )}
+
+              {/* Label */}
               <span
-                className={`font-medium  ml-2 hidden lg:inline ${
+                className={`font-medium ml-2 hidden lg:inline ${
                   active === item.id
                     ? "text-white"
                     : "text-black group-hover:text-white"
@@ -57,8 +67,9 @@ function SidebarMenu() {
                 {item.label}
               </span>
 
+              {/* Badge for lg and larger */}
               {item.count && (
-                <span className="px-2 py-1 text-xs bg-red-500 text-white rounded-full ">
+                <span className="hidden lg:inline px-2 py-1 text-xs bg-red-500 text-white rounded-full">
                   {item.count}
                 </span>
               )}
