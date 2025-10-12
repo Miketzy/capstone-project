@@ -7,11 +7,9 @@ import {
   MessageSquare,
   PlusCircle,
 } from "lucide-react";
-import React, { useState } from "react";
+import React from "react";
 
-function SidebarMenu() {
-  const [active, setActive] = useState("dashboard");
-
+function SidebarMenu({ currentPage, onPageChange }) {
   const menuItems = [
     { id: "dashboard", icon: LayoutDashboard, label: "Species Directory" },
     { id: "add", icon: Leaf, label: "Add Species" },
@@ -32,9 +30,9 @@ function SidebarMenu() {
       {menuItems.map((item) => (
         <div key={item.id}>
           <button
-            onClick={() => setActive(item.id)}
+            onClick={() => onPageChange(item.id)} // 🔥 calls parent function
             className={`group w-full flex items-center justify-between p-3 rounded-xl transition-all duration-200 cursor-pointer ${
-              active === item.id
+              currentPage === item.id
                 ? "bg-gradient-to-r from-[#379564] to-[#22573b] text-white shadow-md"
                 : "hover:bg-gradient-to-r hover:from-[#379564] hover:to-[#22573b] hover:text-white"
             }`}
@@ -43,7 +41,7 @@ function SidebarMenu() {
               {/* Icon */}
               <item.icon
                 className={`w-5 h-5 ${
-                  active === item.id
+                  currentPage === item.id
                     ? "text-white"
                     : "text-black group-hover:text-white"
                 }`}
@@ -59,7 +57,7 @@ function SidebarMenu() {
               {/* Label */}
               <span
                 className={`font-medium ml-2 hidden lg:inline ${
-                  active === item.id
+                  currentPage === item.id
                     ? "text-white"
                     : "text-black group-hover:text-white"
                 }`}

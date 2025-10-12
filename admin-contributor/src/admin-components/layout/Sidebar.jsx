@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import SidebarMenu from "./SidebarMenu";
 import { useState } from "react";
 
-function Sidebar() {
+function Sidebar({ currentPage, onPageChange }) {
   return (
     <>
       <div
@@ -16,7 +16,7 @@ function Sidebar() {
 
         {/*Navigation display a dynamic menu*/}
         <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
-          <SidebarMenu />
+          <SidebarMenu currentPage={currentPage} onPageChange={onPageChange} />
         </nav>
 
         {/*user profile*/}

@@ -12,13 +12,13 @@ function App() {
     <>
       <div className="container-layout">
         <div className="layout">
-          <Sidebar />
+          <Sidebar currentPage={currentPage} onPageChange={setCurrentPage} />
           <div className="flex-1 flex flex-col ">
             <Header />
             <main className="flex-1 overflow-y-auto bg-transparent">
               <div className="p-6 space-y-6 ">
                 {currentPage === "dashboard" && <Dashboard />}
-                {currentPage === "addspecies" && <AddSpecies />}
+                {currentPage === "add" && <AddSpecies />}
               </div>
               <Footer />
             </main>
