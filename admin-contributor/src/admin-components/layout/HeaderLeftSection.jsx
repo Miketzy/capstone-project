@@ -2,7 +2,7 @@ import React from "react";
 
 import { Zap, Menu } from "lucide-react";
 
-function HeaderLeftSection({ sidebarCollapsed, onToggleSidebar }) {
+function HeaderLeftSection() {
   return (
     <>
       <div className="flex items-center space-x-4 block md:hidden">
@@ -17,10 +17,7 @@ function HeaderLeftSection({ sidebarCollapsed, onToggleSidebar }) {
       </div>
 
       <div className="flex items-center space-x-4">
-        <button
-          className="p-2 hidden md:block rounded-lg text-black hover:ng-slate-100 transition-colors cursor-pointer"
-          onClick={() => onToggleSidebar()}
-        >
+        <button className="p-2 hidden md:block rounded-lg text-black hover:ng-slate-100 transition-colors cursor-pointer">
           <Menu className="w-5 h-5 " />
         </button>
 
