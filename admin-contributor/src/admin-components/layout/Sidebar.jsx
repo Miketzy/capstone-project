@@ -7,8 +7,9 @@ function Sidebar({ collapsed, onToggle, currentPage, onPageChange }) {
     <>
       <div
         className={`${
-          collapsed ? "w-20" : "72"
-        }sidebar hidden md:block sticky top-0 z-40`}
+          collapsed ? "w-20" : "w-72"
+        } transition duration-300 ease-in-out bg-white backdrop-blur-xl border-r border-slate-200/50
+  flex flex-col relative hidden md:block sticky top-0 z-40`}
       >
         <div className="sidebar-logo">
           <Logo />
