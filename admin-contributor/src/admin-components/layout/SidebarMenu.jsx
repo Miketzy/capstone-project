@@ -31,8 +31,8 @@ function SidebarMenu({ currentPage, onPageChange }) {
       {menuItems.map((item) => (
         <div key={item.id}>
           <button
-            onClick={() => onPageChange(item.id)} // 🔥 calls parent function
-            className={`group  w-full flex items-center justify-between p-3 rounded-xl transition-all duration-200 cursor-pointer ${
+            onClick={() => onPageChange(item.id)}
+            className={`group relative w-full flex items-center justify-between p-3 rounded-xl transition-all duration-200 cursor-pointer ${
               currentPage === item.id
                 ? "bg-gradient-to-r from-[#379564] to-[#22573b] text-white shadow-md"
                 : "hover:bg-gradient-to-r hover:from-[#379564] hover:to-[#22573b] hover:text-white"
@@ -74,7 +74,7 @@ function SidebarMenu({ currentPage, onPageChange }) {
               )}
             </div>
             <PawPrint
-              className={`absolute hidden lg:right-10 w-3 h-3 opacity-0 translate-y-1 transition-all duration-300
+              className={`absolute hidden lg:right-7 w-3 h-3 opacity-0 translate-y-1 transition-all duration-300
     ${
       currentPage === item.id
         ? "opacity-90 translate-y-0 text-white/90"
