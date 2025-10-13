@@ -11,7 +11,7 @@ function Dashboard() {
       <div className="flex justify-center gap-4">
         <button
           onClick={() => setActiveTab("vertebrates")}
-          className={`px-5 py-2 rounded-xl transition font-medium bg-white ${
+          className={`px-5 py-2 rounded-xl transition font-medium bg-white cursor-pointer ${
             activeTab === "vertebrates"
               ? "bg-gradient-to-r from-[#379564] to-[#22573b] text-white shadow-md"
               : "hover:bg-gradient-to-r hover:from-[#379564] hover:to-[#22573b] hover:text-white"
@@ -22,7 +22,7 @@ function Dashboard() {
 
         <button
           onClick={() => setActiveTab("invertebrates")}
-          className={`px-5 py-2 rounded-xl transition font-medium bg-white ${
+          className={`px-5 py-2 rounded-xl transition font-medium bg-white cursor-pointer ${
             activeTab === "invertebrates"
               ? "bg-gradient-to-r from-[#379564] to-[#22573b] text-white shadow-md"
               : "hover:bg-gradient-to-r hover:from-[#379564] hover:to-[#22573b] hover:text-white"
