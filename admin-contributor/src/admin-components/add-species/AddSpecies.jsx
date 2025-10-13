@@ -11,20 +11,9 @@ function AddSpecies() {
   };
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="flex items-center justify-center min-h-screen">
         <form className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md text-center">
           {/* Input Image Upload */}
-          <div className="mb-6">
-            <label className="block text-gray-700 font-medium mb-2">
-              Upload Image
-            </label>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-              className="block w-full text-sm text-gray-700 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500"
-            />
-          </div>
 
           {/* Other Input Fields */}
           <div className="mb-4 text-left">
@@ -42,6 +31,17 @@ function AddSpecies() {
               type="email"
               placeholder="Enter your email"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
+          <div className="mb-6">
+            <label className="block text-gray-700 font-medium mb-2">
+              Upload Image
+            </label>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleImageChange}
+              className="block w-full text-sm text-gray-700 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
 
