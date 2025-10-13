@@ -11,7 +11,7 @@ function AddSpecies() {
   };
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex  justify-center min-h-screen">
         <form className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md text-center">
           {/* Input Image Upload */}
 
