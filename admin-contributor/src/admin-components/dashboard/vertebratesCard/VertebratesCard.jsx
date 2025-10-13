@@ -38,8 +38,8 @@ function VertebratesCard() {
             <item.icon className="w-6 h-6 text-green-600" />
             <h2 className="text-xl font-semibold text-black">{item.title}</h2>
           </div>
-          <div className="mt-4">
-            <span className="font-medium text-black">{item.count}</span>
+          <div className="mt-4 flex justify-center">
+            <span className="text-2xl font-bold text-black">{item.count}</span>
           </div>
         </div>
       ))}
