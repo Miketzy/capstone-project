@@ -6,7 +6,7 @@ function VertebratesCard() {
   const vertebratesItem = [
     {
       title: "Mammals",
-      icon: PawPrint,
+      icon: ,
       count: "45",
     },
     {
