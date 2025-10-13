@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Bug,
-  Spider,
-  Shell,
-  Star,
-  Waves,
-  Activity,
-  Droplets,
-} from "lucide-react";
+import { Bug, Shell, Star, Waves, Activity, Droplets } from "lucide-react";
 
 function InvertebratesCard() {
   const invertebratesItem = [
@@ -18,7 +10,7 @@ function InvertebratesCard() {
     },
     {
       title: "Arachnids",
-      icon: Spider, // 🕷️
+      icon: Network, // 🕷️
       count: "45",
     },
     {
