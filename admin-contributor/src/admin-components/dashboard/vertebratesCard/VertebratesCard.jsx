@@ -36,7 +36,9 @@ function VertebratesCard() {
         <div key={index} className="bg-white rounded-2xl shadow-md p-5 ">
           <div className="flex">
             <item.icon className="w-6 h-6 text-green-600" />
-            <h2 className="text-xl font-semibold text-black">{item.title}</h2>
+            <h2 className="text-xl font-semibold text-black text-center">
+              {item.title}
+            </h2>
           </div>
           <div className="mt-4 flex justify-center">
             <span className="text-2xl font-bold text-black">{item.count}</span>
