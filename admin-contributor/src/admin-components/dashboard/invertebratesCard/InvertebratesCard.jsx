@@ -1,5 +1,13 @@
 import React from "react";
-import { Bug, Shell, Star, Waves, Activity, Droplets } from "lucide-react";
+import {
+  Bug,
+  Shell,
+  Star,
+  Waves,
+  Activity,
+  Droplets,
+  Network,
+} from "lucide-react";
 
 function InvertebratesCard() {
   const invertebratesItem = [
