@@ -12,9 +12,8 @@ function Dashboard() {
           <button className="bg-white text-black px-5 py-2 rounded-xl hover:bg-green-70 transition">
             Invertebrates
           </button>
-
-          <VertebratesCard />
         </div>
+        <VertebratesCard />
       </div>
     </>
   );
