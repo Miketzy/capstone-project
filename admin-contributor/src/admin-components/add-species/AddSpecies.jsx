@@ -16,7 +16,7 @@ function AddSpecies() {
           {/* Input Image Upload */}
 
           {/* Other Input Fields */}
-          <div className="mb-4 text-left">
+          <div className="mb-4 text-left flex flex-col md:row">
             <label className="block text-gray-700 mb-2">Full Name</label>
             <input
               type="text"
