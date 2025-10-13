@@ -1,4 +1,4 @@
-import { Bird, Fish, PawPrint, Turtle, Frog } from "lucide-react";
+import { Bird, Fish, PawPrint, Turtle, Frog, Dog } from "lucide-react";
 import React from "react";
 import { GiFrog } from "react-icons/gi";
 
@@ -6,7 +6,7 @@ function VertebratesCard() {
   const vertebratesItem = [
     {
       title: "Mammals",
-      icon: ,
+      icon: Dog,
       count: "45",
     },
     {
