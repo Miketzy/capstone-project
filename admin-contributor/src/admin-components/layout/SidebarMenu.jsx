@@ -74,7 +74,7 @@ function SidebarMenu({ currentPage, onPageChange }) {
               )}
             </div>
             <PawPrint
-              className={`absolute right-7 w-3 h-3 opacity-0 translate-y-1 transition-all duration-300
+              className={`absolute hidden lg:right-7 w-3 h-3 opacity-0 translate-y-1 transition-all duration-300
     ${
       currentPage === item.id
         ? "opacity-90 translate-y-0 text-white/90"
