@@ -1,4 +1,5 @@
 import React from "react";
+import VertebratesCard from "./vertebratesCard/VertebratesCard";
 
 function Dashboard() {
   return (
@@ -11,6 +12,8 @@ function Dashboard() {
           <button className="bg-white text-black px-5 py-2 rounded-xl hover:bg-green-70 transition">
             Invertebrates
           </button>
+
+          <VertebratesCard />
         </div>
       </div>
     </>
