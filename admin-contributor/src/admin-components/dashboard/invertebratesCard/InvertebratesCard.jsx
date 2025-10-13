@@ -1,6 +1,6 @@
 import React from "react";
 import { Bug, Shell, Star, Waves, Activity, Droplets } from "lucide-react";
-import { GiSpider } from "react-icons/gi";
+import { GiSpiderAlt } from "react-icons/gi";
 
 function InvertebratesCard() {
   const invertebratesItem = [
@@ -11,7 +11,7 @@ function InvertebratesCard() {
     },
     {
       title: "Arachnids",
-      icon: GiSpider, // 🕷️
+      icon: GiSpiderAlt, // 🕷️
       count: "45",
     },
     {
