@@ -1,5 +1,6 @@
 import React from "react";
 import VertebratesCard from "./vertebratesCard/VertebratesCard";
+import InvertebratesCard from "./invertebratesCard/InvertebratesCard";
 
 function Dashboard() {
   return (
@@ -15,6 +16,7 @@ function Dashboard() {
         </div>
 
         <VertebratesCard />
+        <InvertebratesCard />
       </div>
     </>
   );
