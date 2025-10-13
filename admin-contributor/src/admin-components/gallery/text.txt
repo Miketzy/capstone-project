@@ -150,6 +150,63 @@ export default Navbar;
 
 
 
+{
+      name: "Insects",
+      count: insectsCount,
+      color: "bg-orange-500",
+      icon: <FaBug />,
+      description:
+        "Six-legged invertebrates, the most diverse group of animals.",
+    },
+    {
+      name: "Arachnids",
+      count: arachnidsCount,
+      color: "bg-gray-700",
+      icon: <FaSpider />,
+      description:
+        "Eight-legged invertebrates including spiders and scorpions.",
+    },
+    {
+      name: "Mollusks",
+      count: mollusksCount,
+      color: "bg-purple-500",
+      icon: <FaSkullCrossbones />,
+      description:
+        "Soft-bodied animals, many have shells like snails and clams.",
+    },
+    {
+      name: "Echinoderms",
+      count: echinodermsCount,
+      color: "bg-indigo-500",
+      icon: <FaLeaf />,
+      description:
+        "Marine animals like starfish and sea urchins with radial symmetry.",
+    },
+    {
+      name: "Cnidarians",
+      count: cnidariansCount,
+      color: "bg-pink-500",
+      icon: <FaVirus />,
+      description:
+        "Marine animals with stinging cells like jellyfish and corals.",
+    },
+    {
+      name: "Worms",
+      count: wormsCount,
+      color: "bg-amber-700",
+      icon: <FaBone />,
+      description:
+        "Invertebrates with elongated bodies, living in soil and water.",
+    },
+    {
+      name: "Sponges",
+      count: spongesCount,
+      color: "bg-cyan-500",
+      icon: <FaShapes />,
+      description: "Simple aquatic animals with porous bodies.",
+    },
+  ];
+
 
 
 
