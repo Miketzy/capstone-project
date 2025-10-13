@@ -34,9 +34,11 @@ function VertebratesCard() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {vertebratesItem.map((item, index) => (
         <div key={index} className="bg-white rounded-2xl shadow-md p-5 ">
-          <div className="flex gap-5">
-            <item.icon className="w-6 h-6 text-green-600" />
-            <h2 className="text-xl font-semibold text-black -">{item.title}</h2>
+          <div className="flex items-center gap-5">
+            <div className="w-12 h-12 bg-green-100 flex items-center justify-center rounded-lg shadow-sm">
+              <item.icon className="w-6 h-6 text-green-600" />
+            </div>
+            <h2 className="text-xl font-semibold text-black">{item.title}</h2>
           </div>
           <div className="mt-4 flex justify-center">
             <span className="text-2xl font-bold text-black">{item.count}</span>
