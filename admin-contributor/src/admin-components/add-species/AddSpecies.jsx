@@ -17,6 +17,18 @@ function AddSpecies() {
 
           {/* Other Input Fields */}
           <div className="flex flex-col md:flex-row gap-10">
+            <div className="mb-6">
+              <label className="block text-gray-700 font-medium mb-2">
+                Upload Image
+              </label>
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange}
+                className="block w-full text-sm text-gray-700 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+            </div>
+
             <div className="mb-4 text-left w">
               <label className="block text-gray-700 mb-2">Full Name</label>
               <input
@@ -41,17 +53,6 @@ function AddSpecies() {
               type="email"
               placeholder="Enter your email"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-            />
-          </div>
-          <div className="mb-6">
-            <label className="block text-gray-700 font-medium mb-2">
-              Upload Image
-            </label>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-              className="block w-full text-sm text-gray-700 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
 
