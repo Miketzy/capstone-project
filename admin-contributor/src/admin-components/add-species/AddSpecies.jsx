@@ -13,22 +13,20 @@ function AddSpecies() {
     <>
       <div className="flex justify-center ">
         <form className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md text-center">
-          {/* Input Image Upload */}
-
+          {/* Input Image Upload */}|
+          <div className="mb-6">
+            <label className="block text-gray-700 font-medium mb-2">
+              Upload Image
+            </label>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleImageChange}
+              className="block w-full text-sm text-gray-700 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
           {/* Other Input Fields */}
           <div className="flex flex-col md:flex-row gap-10">
-            <div className="mb-6">
-              <label className="block text-gray-700 font-medium mb-2">
-                Upload Image
-              </label>
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleImageChange}
-                className="block w-full text-sm text-gray-700 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500"
-              />
-            </div>
-
             <div className="mb-4 text-left w">
               <label className="block text-gray-700 mb-2">Full Name</label>
               <input
@@ -46,7 +44,6 @@ function AddSpecies() {
               />
             </div>
           </div>
-
           <div className="mb-6 text-left">
             <label className="block text-gray-700 mb-2">Email</label>
             <input
@@ -55,7 +52,6 @@ function AddSpecies() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
-
           {/* Submit Button */}
           <button
             type="submit"
