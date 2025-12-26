@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AddSpeciesImage from "./AddSpeciesImage";
+import AddSpeciesInput from "./AddSpeciesInput";
 
 function AddSpecies() {
   const [preview, setPreview] = useState(null);
