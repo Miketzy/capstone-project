@@ -1,16 +1,7 @@
-import React, { useState } from "react";
 import AddSpeciesImage from "./AddSpeciesImage";
 import AddSpeciesInput from "./AddSpeciesInput";
 
 function AddSpecies() {
-  const [preview, setPreview] = useState(null);
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setPreview(URL.createObjectURL(file)); // optional, for later use
-    }
-  };
   return (
     <>
       <div className="flex justify-center ">

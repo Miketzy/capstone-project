@@ -1,6 +1,13 @@
-import React from "react";
-
+import React, { useState } from "react";
 function AddSpeciesImage() {
+  const [preview, setPreview] = useState(null);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setPreview(URL.createObjectURL(file)); // optional, for later use
+    }
+  };
   return (
     <>
       <div className="mb-6">
