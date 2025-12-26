@@ -18,15 +18,14 @@ function AddSpeciesImage() {
   };
 
   return (
-    <div className="mb-6">
+    <div className="mb-6 flex flex-col items-center">
       <label className="block text-gray-700 font-medium mb-2">
         Upload Image
       </label>
 
-      {/* Image Preview */}
       <div
-        className="w-64 h-40 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center cursor-pointer hover:border-green-500"
         onClick={handleImageClick}
+        className="w-64 h-40 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-green-500 flex items-center justify-center"
       >
         <img
           src={preview}
@@ -35,7 +34,6 @@ function AddSpeciesImage() {
         />
       </div>
 
-      {/* Hidden file input */}
       <input
         type="file"
         accept="image/*"
