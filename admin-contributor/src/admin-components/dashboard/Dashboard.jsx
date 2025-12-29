@@ -37,6 +37,10 @@ function Dashboard() {
         {activeTab === "vertebrates" && <VertebratesCard />}
         {activeTab === "invertebrates" && <InvertebratesCard />}
       </div>
+
+      <div>
+        <h1>Contributor Table</h1>
+      </div>
     </div>
   );
 }
