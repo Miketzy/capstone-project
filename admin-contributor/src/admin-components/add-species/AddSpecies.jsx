@@ -15,7 +15,7 @@ function AddSpecies() {
             type="submit"
             className="w-full bg-gradient-to-r from-[#379564] to-[#22573b] text-white py-2 rounded-lg hover:opacity-90 transition"
           >
-            Submit
+            Add Species
           </button>
         </form>
       </div>
