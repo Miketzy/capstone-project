@@ -53,8 +53,9 @@ function AddSpeciesInput() {
           />
         </div>
       </div>
-      <div className="mb-4 text-left w-full md:w-1/2">
-        <label className="block text-gray-700 mb-2">Mapping</label>
+
+      <div className="mb-6 text-left">
+        <label className="block text-gray-700 mb-2">Habitat</label>
         <input
           type="text"
           className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
