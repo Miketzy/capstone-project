@@ -35,7 +35,13 @@ function AddSpeciesInput() {
         <div className="mb-4 text-left w-full md:w-1/2">
           <label className="block text-gray-700 mb-2">Classification</label>
           <select
-            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 cursor-pointer"
+            className="
+      w-full px-4 py-2 border rounded-lg cursor-pointer
+      transition-all duration-300
+      hover:bg-gradient-to-r hover:from-[#379564] hover:to-[#22573b]
+      hover:text-white
+      focus:ring-2 focus:ring-green-500
+    "
             defaultValue=""
           >
             <option value="" disabled>
