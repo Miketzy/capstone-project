@@ -39,7 +39,7 @@ function Dashboard() {
         {activeTab === "invertebrates" && <InvertebratesCard />}
       </div>
 
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row gap-5 ">
         <h1>Analytics</h1>
         <h1>Analytics</h1>
       </div>
