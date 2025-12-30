@@ -1,9 +1,7 @@
 import React, { useRef, useState } from "react";
 
 function AddSpeciesImage() {
-  const [preview, setPreview] = useState(
-    "https://via.placeholder.com/300x200?text=Unknown+Image"
-  );
+  const [preview, setPreview] = useState("/images/sample.jpg");
   const fileInputRef = useRef(null);
 
   const handleImageClick = () => {
