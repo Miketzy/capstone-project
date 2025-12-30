@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import VertebratesCard from "./vertebratesCard/VertebratesCard";
 import InvertebratesCard from "./invertebratesCard/InvertebratesCard";
+import ContributorTable from "./contributorTable/ContributorTable";
 
 function Dashboard() {
   const [activeTab, setActiveTab] = useState("vertebrates"); // default active
@@ -39,7 +40,7 @@ function Dashboard() {
       </div>
 
       <div>
-        <h1>Contributor Table</h1>
+        <ContributorTable />
       </div>
     </div>
   );
