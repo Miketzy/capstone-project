@@ -6,7 +6,11 @@ function Logo() {
     <>
       <div className="logo-layout">
         <div className="logo">
-          <Zap className="Zap-layout" />
+          <img
+            src="/images/Bio.png" // path sa public folder
+            alt="Zap Logo"
+            className="Zap-layout"
+          />
         </div>
 
         {/*Conditional Rendering*/}
