@@ -44,6 +44,7 @@ function Dashboard() {
         <h1>Analytics</h1>
       </div>
 
+      {/**In the Contributor Table, you can see whether a contributor is active or not. */}
       <div>
         <ContributorTable />
       </div>
