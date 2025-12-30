@@ -39,9 +39,14 @@ function Dashboard() {
         {activeTab === "invertebrates" && <InvertebratesCard />}
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-5 ">
-        <h1>Analytics</h1>
-        <h1>Analytics</h1>
+      <div className="flex flex-col lg:flex-row gap-5">
+        <div className="flex-1 p-6 bg-white rounded-xl shadow-md border border-gray-200">
+          <h1 className="text-xl font-bold">Analytics</h1>
+        </div>
+
+        <div className="flex-1 p-6 bg-white rounded-xl shadow-md border border-gray-200">
+          <h1 className="text-xl font-bold">Analytics</h1>
+        </div>
       </div>
 
       {/**In the Contributor Table, you can see whether a contributor is active or not. */}
