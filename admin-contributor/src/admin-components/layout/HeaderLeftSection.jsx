@@ -12,13 +12,9 @@ function HeaderLeftSection() {
     flex items-center justify-center shadow-lg"
           >
             <img
-              src="/images/download.jpg" // original image
-              alt="user"
-              className="w-10 h-10 rounded-full ring-2 ring-blue-500"
-              onError={(e) => {
-                e.target.onerror = null; // prevent infinite loop
-                e.target.src = "/images/unknown.jpg"; // default image
-              }}
+              src="/images/Bio.png" // path sa public folder
+              alt="Zap Logo"
+              className="w-4 h-4 text-white"
             />
           </div>
         </div>
