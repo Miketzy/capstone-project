@@ -5,7 +5,7 @@ function UserProfile() {
     <>
       <div className="flex items-center space-x-3 p-3 rounded-xl bg-gradient-to-r from-[#379564] to-[#22573b]">
         <img
-          src=""
+          src="/images/download.jpg"
           alt="user"
           className="w-10 h-10 rounded-full ring-2 ring-blue-500"
         />
