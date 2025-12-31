@@ -81,6 +81,7 @@ function AddSpeciesInput() {
         <label className="block text-gray-700 mb-2">Habitat</label>
         <textarea
           rows="4"
+          placeholder="Enter the Habitat of the species"
           className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
         />
       </div>
@@ -88,6 +89,7 @@ function AddSpeciesInput() {
         <label className="block text-gray-700 mb-2">Threats</label>
         <textarea
           rows="4"
+          placeholder="Enter the Species Threats"
           className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
         />
       </div>
@@ -95,6 +97,7 @@ function AddSpeciesInput() {
         <label className="block text-gray-700 mb-2">Conservation Effort</label>
         <textarea
           rows="4"
+          placeholder="Enter The species Conservation Status"
           className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
         />
       </div>
@@ -102,6 +105,7 @@ function AddSpeciesInput() {
         <label className="block text-gray-700 mb-2">Description</label>
         <textarea
           rows="4"
+          placeholder="Enter the species description"
           className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
         />
       </div>
