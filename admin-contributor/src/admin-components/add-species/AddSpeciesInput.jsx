@@ -9,6 +9,7 @@ function AddSpeciesInput() {
           <label className="block text-gray-700 mb-2">Specific Name</label>
           <input
             type="text"
+            placeholder="Enter Specific name of the Species"
             className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
           />
         </div>
@@ -17,6 +18,7 @@ function AddSpeciesInput() {
           <label className="block text-gray-700 mb-2">Scientific Name</label>
           <input
             type="text"
+            placeholder="Enter Scientific name of tthe species"
             className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
           />
         </div>
@@ -28,6 +30,7 @@ function AddSpeciesInput() {
           <label className="block text-gray-700 mb-2">Common Name</label>
           <input
             type="text"
+            placeholder="Enter common name of the species"
             className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
           />
         </div>
@@ -58,6 +61,7 @@ function AddSpeciesInput() {
           </label>
           <input
             type="text"
+            placeholder="Enter Conservation Status"
             className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
           />
         </div>
@@ -67,6 +71,7 @@ function AddSpeciesInput() {
         <label className="block text-gray-700 mb-2">Mapping</label>
         <input
           type="text"
+          placeholder="Enter locaiton of the species"
           className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
         />
       </div>
