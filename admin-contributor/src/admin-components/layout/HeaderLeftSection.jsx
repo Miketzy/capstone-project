@@ -11,7 +11,15 @@ function HeaderLeftSection() {
             className="w-8 h-8 bg-gradient-to-r from-[#379564] to-[#22573b] rounded-xl 
     flex items-center justify-center shadow-lg"
           >
-            <Zap className="w-4 h-4 text-white" />
+            <img
+              src="/images/download.jpg" // original image
+              alt="user"
+              className="w-10 h-10 rounded-full ring-2 ring-blue-500"
+              onError={(e) => {
+                e.target.onerror = null; // prevent infinite loop
+                e.target.src = "/images/unknown.jpg"; // default image
+              }}
+            />
           </div>
         </div>
       </div>
