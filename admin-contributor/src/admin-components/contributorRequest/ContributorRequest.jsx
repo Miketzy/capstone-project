@@ -10,6 +10,12 @@ const requestData = [
   { id: 4, name: "Ana Lopez", species: "Eagle", status: "Rejected" },
   { id: 5, name: "Luis Ramos", species: "Shark", status: "Pending" },
   { id: 6, name: "Cathy Villanueva", species: "Frog", status: "Pending" },
+  { id: 7, name: "Ramon Cruz", species: "Giraffe", status: "Approved" },
+  { id: 8, name: "Liza Moreno", species: "Penguin", status: "Pending" },
+  { id: 9, name: "Oscar Dela Rosa", species: "Bear", status: "Rejected" },
+  { id: 10, name: "Nina Valdez", species: "Wolf", status: "Pending" },
+  { id: 11, name: "Mark Tan", species: "Dolphin", status: "Approved" },
+  { id: 12, name: "Ella Rivera", species: "Owl", status: "Pending" },
 ];
 
 function ContributorRequest() {
