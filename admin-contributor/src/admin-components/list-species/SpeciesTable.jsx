@@ -118,7 +118,7 @@ function SpeciesTable() {
   );
 
   return (
-    <div className="p-4">
+    <>
       {/* Search + Filters */}
       <div className="flex flex-col gap-3 md:flex-row md:justify-between mb-4">
         <SearchBar search={search} setSearch={setSearch} />
@@ -145,7 +145,7 @@ function SpeciesTable() {
         totalPages={totalPages}
         setCurrentPage={setCurrentPage}
       />
-    </div>
+    </>
   );
 }
 
