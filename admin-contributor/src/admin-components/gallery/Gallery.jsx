@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const galleryItems = [
   { id: 1, name: "Lion", image: "/images/lion.jpg" },
@@ -16,40 +16,54 @@ const galleryItems = [
 ];
 
 function Gallery() {
-  return (
-    <div className="">
-      <div
-        className="
-        grid gap-4
-        grid-cols-2
-        md:grid-cols-4
-        lg:grid-cols-5
-      "
-      >
-        {galleryItems.map((item) => (
-          <div
-            key={item.id}
-            className="bg-white rounded-xl shadow-md overflow-hidden
-                       hover:shadow-lg transition"
-          >
-            {/* Image */}
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-full h-32 object-cover"
-              onError={(e) => {
-                e.target.src = "/images/unknown.jpg";
-              }}
-            />
+  const [search, setSearch] = useState("");
 
-            {/* Name */}
-            <div className="p-2 text-center">
-              <p className="text-sm font-medium text-gray-700 truncate">
-                {item.name}
-              </p>
+  // Filter gallery by search input
+  const filteredItems = galleryItems.filter((item) =>
+    item.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  return (
+    <div className="p-4">
+      {/* Search Bar */}
+      <div className="mb-4">
+        <input
+          type="text"
+          placeholder="Search animals..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+      </div>
+
+      {/* Gallery Grid */}
+      <div className="grid gap-4 grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
+        {filteredItems.length > 0 ? (
+          filteredItems.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+            >
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-full h-32 object-cover"
+                onError={(e) => {
+                  e.target.src = "/images/unknown.jpg";
+                }}
+              />
+              <div className="p-2 text-center">
+                <p className="text-sm font-medium text-gray-700 truncate">
+                  {item.name}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p className="col-span-full text-center text-gray-500">
+            No results found.
+          </p>
+        )}
       </div>
     </div>
   );
