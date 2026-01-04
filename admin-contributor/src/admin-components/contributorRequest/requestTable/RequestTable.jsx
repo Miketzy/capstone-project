@@ -7,21 +7,25 @@ function RequestTable({ items }) {
       <table className="min-w-full border border-gray-200 rounded-lg text-sm">
         <thead className="bg-gray-100">
           <tr>
-            <th className="px-4 py-2 text-left font-semibold">Name</th>
-            <th className="px-4 py-2 text-left font-semibold">Species Name</th>
-            <th className="px-4 py-2 text-center font-semibold">Status</th>
-            <th className="px-4 py-2 text-center font-semibold">Action</th>
+            <th className="px-3 py-2 font-semibold">Name</th>
+            <th className="px-3 py-2 font-semibold">Species Name</th>
+            <th className="px-3 py-2 font-semibold hidden lg:table-cell">
+              Status
+            </th>
+            <th className="px-3 py-2 font-semibold">Action</th>
           </tr>
         </thead>
 
         <tbody>
           {items.map((item) => (
             <tr key={item.id} className="border-t hover:bg-gray-50 transition">
-              <td className="px-4 py-2 whitespace-nowrap">{item.name}</td>
-              <td className="px-4 py-2 whitespace-nowrap">{item.species}</td>
-              <td className="px-4 py-2 text-center">
+              <td className="px-3 py-2 font-medium whitespace-nowrap">
+                {item.name}
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">{item.species}</td>
+              <td className="px-3 py-2 text-center">
                 <span
-                  className={`px-3 py-1 rounded-full text-xs font-medium
+                  className={`px-3 py-2 hidden lg:table-cell whitespace-nowrap
                     ${
                       item.status === "Approved"
                         ? "bg-green-100 text-green-700"
@@ -33,7 +37,7 @@ function RequestTable({ items }) {
                   {item.status}
                 </span>
               </td>
-              <td className="px-4 py-2">
+              <td className="px-3 py-2 ">
                 <div className="flex justify-center">
                   <ReqButton />
                 </div>
