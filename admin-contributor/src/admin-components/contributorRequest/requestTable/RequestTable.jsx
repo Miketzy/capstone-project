@@ -22,10 +22,12 @@ function RequestTable({ items }) {
               <td className="px-3 py-2 font-medium whitespace-nowrap">
                 {item.name}
               </td>
-              <td className="px-3 py-2 whitespace-nowrap">{item.species}</td>
-              <td className="px-3 py-2 text-center">
+              <td className="px-3 py-2 font-medium whitespace-nowrap">
+                {item.species}
+              </td>
+              <td className="px-3 py-2 hidden lg:table-cell whitespace-nowrap">
                 <span
-                  className={`px-3 py-2 hidden lg:table-cell whitespace-nowrap
+                  className={`px-3 py-1 rounded-full text-xs font-medium
                     ${
                       item.status === "Approved"
                         ? "bg-green-100 text-green-700"
@@ -37,7 +39,7 @@ function RequestTable({ items }) {
                   {item.status}
                 </span>
               </td>
-              <td className="px-3 py-2 ">
+              <td className="px-4 py-2">
                 <div className="flex justify-center">
                   <ReqButton />
                 </div>
