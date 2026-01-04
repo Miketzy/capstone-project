@@ -1,5 +1,5 @@
 import React from "react";
-import ActionButtons from "./action-buttton/ActionButtons";
+import ActionButtons from "./action-button/ActionButtons";
 
 function Tables({ items, currentPage, itemsPerPage }) {
   return (
