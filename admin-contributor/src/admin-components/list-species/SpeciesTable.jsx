@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import SearchBar from "./searchbar/Searchbar";
 import Filters from "./filter/Filters";
-import SearchBar from "./table/Tables";
-import Table from "./table/Table";
+import Table from "./table/Tables";
 import Paginations from "./pagination/Paginations";
 
 const speciesData = [
