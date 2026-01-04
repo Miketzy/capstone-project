@@ -123,15 +123,17 @@ function SpeciesTable() {
     <>
       {/* Search + Filters */}
       <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-4">
-        <SearchBar search={search} setSearch={setSearch} />
-        <Filters
-          filterClassification={filterClassification}
-          setFilterClassification={setFilterClassification}
-          filterCategory={filterCategory}
-          setFilterCategory={setFilterCategory}
-          filterStatus={filterStatus}
-          setFilterStatus={setFilterStatus}
-        />
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-4">
+          <SearchBar search={search} setSearch={setSearch} />
+          <Filters
+            filterClassification={filterClassification}
+            setFilterClassification={setFilterClassification}
+            filterCategory={filterCategory}
+            setFilterCategory={setFilterCategory}
+            filterStatus={filterStatus}
+            setFilterStatus={setFilterStatus}
+          />
+        </div>
       </div>
 
       {/* Table */}
