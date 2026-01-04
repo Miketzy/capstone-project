@@ -10,12 +10,12 @@ import {
 
 function Navbar({ currentPage, onPageChange }) {
   const navItems = [
-    { id: "dashboard", icon: LayoutDashboard, label: "Species Directory" },
-    { id: "add", icon: Leaf, label: "Add Species" },
+    { id: "dashboard", icon: LayoutDashboard, label: "Dashboard" },
+    { id: "add", icon: Leaf, label: "Add" },
     { id: "list", icon: List, label: "List" },
     { id: "analytics", icon: BarChart3, label: "Analytics" },
-    { id: "create", icon: PlusCircle, label: "Create Question" },
-    { id: "request", icon: MessageSquare, label: "Contributor Request" },
+    { id: "create", icon: PlusCircle, label: "Create" },
+    { id: "request", icon: MessageSquare, label: "Request" },
     { id: "gallery", icon: Image, label: "Gallery" },
   ];
 
