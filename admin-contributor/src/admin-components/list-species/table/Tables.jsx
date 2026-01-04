@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import ActionsButton from "../action-button/ActionsButton";
 
 function Tables({ items, currentPage, itemsPerPage }) {
+  const tableContainerRef = useRef(null);
+
+  // Optional: auto-scroll to right on load
+  useEffect(() => {
+    const container = tableContainerRef.current;
+    if (container && container.scrollWidth > container.clientWidth) {
+      container.scrollLeft = container.scrollWidth; // scroll to right
+    }
+  }, [items]); // scroll whenever items change
+
   return (
-    <div className="overflow-x-auto">
+    <div
+      ref={tableContainerRef}
+      className="overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100"
+    >
       <table className="min-w-full border border-gray-200 rounded-lg">
         <thead className="bg-gray-100">
           <tr>
