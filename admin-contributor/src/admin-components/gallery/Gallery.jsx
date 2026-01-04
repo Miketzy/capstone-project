@@ -11,7 +11,7 @@ const galleryItems = [
 
 function Gallery() {
   return (
-    <div className="p-4">
+    <div className="">
       <div
         className="
         grid gap-4
