@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SearchBar from "./SearchBar";
-import GalleryGrid from "./GalleryGrid";
+import SearchBar from "./search-bar/SearchBar";
+import GalleryImage from "./images/GalleryImage";
 
 const galleryItems = [
   { id: 1, name: "Lion", image: "/images/lion.jpg" },
@@ -30,7 +30,7 @@ function Gallery() {
       <SearchBar search={search} setSearch={setSearch} />
 
       {/* Gallery */}
-      <GalleryGrid items={filteredItems} />
+      <GalleryImage items={filteredItems} />
     </>
   );
 }
