@@ -4,47 +4,42 @@ import ActionsButton from "../action-button/ActionsButton";
 function Tables({ items, currentPage, itemsPerPage }) {
   return (
     <div className="overflow-x-auto w-full">
-      <table className="min-w-full border border-gray-200 rounded-lg text-sm text-left">
-        {/* TABLE HEADER */}
+      <table className="min-w-full border border-gray-200 rounded-lg text-sm">
         <thead className="bg-gray-100">
           <tr>
-            <th className="px-4 py-3 text-center font-semibold">No.</th>
-            <th className="px-4 py-3 font-semibold">Name</th>
-            <th className="px-4 py-3 font-semibold">Classification</th>
-            <th className="px-4 py-3 font-semibold">Category</th>
-            <th className="px-4 py-3 font-semibold">Status</th>
-            <th className="px-4 py-3 text-center font-semibold">Action</th>
+            <th className="px-3 py-2">No.</th>
+            <th className="px-3 py-2">Name</th>
+
+            <th className="px-3 py-2 hidden sm:table-cell">Classification</th>
+            <th className="px-3 py-2 hidden md:table-cell">Category</th>
+            <th className="px-3 py-2 hidden lg:table-cell">Status</th>
+
+            <th className="px-3 py-2">Action</th>
           </tr>
         </thead>
 
-        {/* TABLE BODY */}
         <tbody>
           {items.map((item, index) => (
-            <tr key={item.id} className="border-t hover:bg-green-50 transition">
-              <td className="px-4 py-3 text-center">
+            <tr key={item.id} className="border-t hover:bg-gray-50">
+              <td className="px-3 py-2">
                 {(currentPage - 1) * itemsPerPage + index + 1}
               </td>
+              <td className="px-3 py-2 font-medium">{item.name}</td>
 
-              <td className="px-4 py-3 font-medium whitespace-nowrap">
-                {item.name}
-              </td>
-
-              <td className="px-4 py-3 whitespace-nowrap">
+              <td className="px-3 py-2 hidden sm:table-cell">
                 {item.classification}
               </td>
+              <td className="px-3 py-2 hidden md:table-cell">
+                {item.category}
+              </td>
+              <td className="px-3 py-2 hidden lg:table-cell">{item.status}</td>
 
-              <td className="px-4 py-3 whitespace-nowrap">{item.category}</td>
-
-              <td className="px-4 py-3 whitespace-nowrap">{item.status}</td>
-
-              <td className="px-4 py-3">
-                <div className="flex justify-center">
-                  <ActionsButton
-                    onView={() => alert(`View ${item.name}`)}
-                    onEdit={() => alert(`Edit ${item.name}`)}
-                    onDelete={() => alert(`Delete ${item.name}`)}
-                  />
-                </div>
+              <td className="px-3 py-2">
+                <ActionsButton
+                  onView={() => alert(`View ${item.name}`)}
+                  onEdit={() => alert(`Edit ${item.name}`)}
+                  onDelete={() => alert(`Delete ${item.name}`)}
+                />
               </td>
             </tr>
           ))}
