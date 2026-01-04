@@ -5,11 +5,11 @@ import Footer from "./admin-components/footer/Footer";
 import { useState } from "react";
 import Dashboard from "./admin-components/dashboard/Dashboard";
 import AddSpecies from "./admin-components/add-species/AddSpecies";
-import List from "./admin-components/list-species/List";
 import Analytics from "./admin-components/analytics/Analytics";
 import Create from "./admin-components/createQuest/Create";
 import Gallery from "./admin-components/gallery/Gallery";
 import ContributorRequest from "./admin-components/contributorRequest/ContributorRequest";
+import SpeciesTable from "./admin-components/list-species/SpeciesTable";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("dashboard");
@@ -24,7 +24,7 @@ function App() {
               <div className="p-6 space-y-6 ">
                 {currentPage === "dashboard" && <Dashboard />}
                 {currentPage === "add" && <AddSpecies />}
-                {currentPage === "list" && <List />}
+                {currentPage === "list" && <SpeciesTable />}
                 {currentPage === "analytics" && <Analytics />}
                 {currentPage === "create" && <Create />}
                 {currentPage === "request" && <ContributorRequest />}
