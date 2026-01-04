@@ -17,7 +17,10 @@ function Tables({ items, currentPage, itemsPerPage }) {
         </thead>
         <tbody>
           {items.map((item, index) => (
-            <tr key={item.id} className="border-t hover:bg-gray-50">
+            <tr
+              key={item.id}
+              className="border-t hover:bg-gray-50 md:table-row flex flex-col md:flex-row mb-2 md:mb-0"
+            >
               <td className="px-4 py-2">
                 {(currentPage - 1) * itemsPerPage + index + 1}
               </td>
@@ -26,7 +29,7 @@ function Tables({ items, currentPage, itemsPerPage }) {
               <td className="px-4 py-2">{item.category}</td>
               <td className="px-4 py-2">{item.status}</td>
               <td className="px-4 py-2">
-                <ActionsButton
+                <ActionButtons
                   onView={() => alert(`View ${item.name}`)}
                   onEdit={() => alert(`Edit ${item.name}`)}
                   onDelete={() => alert(`Delete ${item.name}`)}
