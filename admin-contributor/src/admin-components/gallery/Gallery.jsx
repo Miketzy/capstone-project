@@ -30,7 +30,7 @@ function Gallery() {
             <img
               src={item.image}
               alt={item.name}
-              className="w-full h-32 object-contain"
+              className="w-full h-32 object-cover"
               onError={(e) => {
                 e.target.src = "/images/unknown.jpg";
               }}
