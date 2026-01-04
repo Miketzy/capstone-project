@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import RequestTable from "./table/RequestTable";
+import RequestTable from "./requestTable/RequestTable";
 import RequestPagination from "./requestpagenation/RequestPagination";
 import RequesttSearchBar from "./requestsearchbar/RequesttSearchBar";
 
