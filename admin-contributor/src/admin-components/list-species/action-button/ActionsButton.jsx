@@ -1,7 +1,7 @@
 import React from "react";
 import { Eye, Edit, Trash } from "lucide-react";
 
-function ActionButtons({ onView, onEdit, onDelete }) {
+function ActionsButton({ onView, onEdit, onDelete }) {
   return (
     <div className="flex gap-2">
       <button
@@ -26,4 +26,4 @@ function ActionButtons({ onView, onEdit, onDelete }) {
   );
 }
 
-export default ActionButtons;
+export default ActionsButton;

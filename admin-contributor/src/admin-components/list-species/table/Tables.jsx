@@ -1,5 +1,5 @@
 import React from "react";
-import ActionButtons from "./action-button/ActionButtons";
+import ActionsButton from "../action-button/ActionsButton";
 
 function Tables({ items, currentPage, itemsPerPage }) {
   return (
@@ -26,7 +26,7 @@ function Tables({ items, currentPage, itemsPerPage }) {
               <td className="px-4 py-2">{item.category}</td>
               <td className="px-4 py-2">{item.status}</td>
               <td className="px-4 py-2">
-                <ActionButtons
+                <ActionsButton
                   onView={() => alert(`View ${item.name}`)}
                   onEdit={() => alert(`Edit ${item.name}`)}
                   onDelete={() => alert(`Delete ${item.name}`)}
