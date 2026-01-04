@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchBar from "./searchbar/Searchbar";
 import Filters from "./filter/Filters";
-import SearchBar from "./table/Table";
+import SearchBar from "./table/Tables";
 import Table from "./table/Table";
 import Paginations from "./pagination/Paginations";
 
