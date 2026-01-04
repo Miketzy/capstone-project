@@ -35,7 +35,7 @@ function App() {
           </div>
         </div>
 
-        <div className="block md:hidden mt-2 ">
+        <div className="block md:hidden ">
           <Navbar currentPage={currentPage} onPageChange={setCurrentPage} />
         </div>
       </div>
