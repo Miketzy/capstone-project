@@ -24,7 +24,7 @@ function Gallery() {
   );
 
   return (
-    <div className="p-4">
+    <>
       {/* Search Bar */}
       <div className="mb-4">
         <input
@@ -65,7 +65,7 @@ function Gallery() {
           </p>
         )}
       </div>
-    </div>
+    </>
   );
 }
 
