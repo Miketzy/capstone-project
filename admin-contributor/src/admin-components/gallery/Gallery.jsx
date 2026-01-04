@@ -7,6 +7,18 @@ const galleryItems = [
   { id: 4, name: "Eagle", image: "/images/eagle.jpg" },
   { id: 5, name: "Shark", image: "/images/shark.jpg" },
   { id: 6, name: "Frog", image: "/images/frog.jpg" },
+  { id: 4, name: "Eagle", image: "/images/eagle.jpg" },
+  { id: 5, name: "Shark", image: "/images/shark.jpg" },
+  { id: 6, name: "Frog", image: "/images/frog.jpg" },
+  { id: 4, name: "Eagle", image: "/images/eagle.jpg" },
+  { id: 5, name: "Shark", image: "/images/shark.jpg" },
+  { id: 6, name: "Frog", image: "/images/frog.jpg" },
+  { id: 4, name: "Eagle", image: "/images/eagle.jpg" },
+  { id: 5, name: "Shark", image: "/images/shark.jpg" },
+  { id: 6, name: "Frog", image: "/images/frog.jpg" },
+  { id: 4, name: "Eagle", image: "/images/eagle.jpg" },
+  { id: 5, name: "Shark", image: "/images/shark.jpg" },
+  { id: 6, name: "Frog", image: "/images/frog.jpg" },
 ];
 
 function Gallery() {
