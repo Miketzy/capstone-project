@@ -1,11 +1,9 @@
-import React from "react";
-
 function Paginations({ currentPage, totalPages, setCurrentPage }) {
   return (
-    <div className="flex justify-end items-center gap-2 mt-4">
+    <div className="flex justify-end gap-2 mt-4 flex-wrap">
       <button
         onClick={() => setCurrentPage(Math.max(currentPage - 1, 1))}
-        className="px-3 py-1 border rounded-md hover:bg-gray-100"
+        className="px-3 py-1 border rounded"
       >
         Prev
       </button>
@@ -14,10 +12,8 @@ function Paginations({ currentPage, totalPages, setCurrentPage }) {
         <button
           key={i}
           onClick={() => setCurrentPage(i + 1)}
-          className={`px-3 py-1 border rounded-md ${
-            currentPage === i + 1
-              ? "bg-green-500 text-white"
-              : "hover:bg-gray-100"
+          className={`px-3 py-1 border rounded ${
+            currentPage === i + 1 ? "bg-green-500 text-white" : ""
           }`}
         >
           {i + 1}
@@ -26,7 +22,7 @@ function Paginations({ currentPage, totalPages, setCurrentPage }) {
 
       <button
         onClick={() => setCurrentPage(Math.min(currentPage + 1, totalPages))}
-        className="px-3 py-1 border rounded-md hover:bg-gray-100"
+        className="px-3 py-1 border rounded"
       >
         Next
       </button>

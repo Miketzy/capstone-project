@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchBar from "./searchbar/Searchbar";
 import Filters from "./filter/Filters";
-import Table from "./table/Tables";
+import Tables from "./table/Tables";
 import Paginations from "./pagination/Paginations";
 
 const speciesData = [
@@ -101,17 +101,15 @@ function SpeciesTable() {
 
   const itemsPerPage = 10;
 
-  // Filter items
-  const filteredItems = speciesData.filter((item) => {
-    return (
+  const filteredItems = speciesData.filter(
+    (item) =>
       item.name.toLowerCase().includes(search.toLowerCase()) &&
       (filterClassification === "All Species" ||
         item.classification === filterClassification) &&
       (filterCategory === "All Categories" ||
         item.category === filterCategory) &&
       (filterStatus === "All Statuses" || item.status === filterStatus)
-    );
-  });
+  );
 
   const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
   const paginatedItems = filteredItems.slice(
@@ -120,24 +118,22 @@ function SpeciesTable() {
   );
 
   return (
-    <>
+    <div className="p-4">
       {/* Search + Filters */}
-      <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-4">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-4">
-          <SearchBar search={search} setSearch={setSearch} />
-          <Filters
-            filterClassification={filterClassification}
-            setFilterClassification={setFilterClassification}
-            filterCategory={filterCategory}
-            setFilterCategory={setFilterCategory}
-            filterStatus={filterStatus}
-            setFilterStatus={setFilterStatus}
-          />
-        </div>
+      <div className="flex flex-col gap-3 md:flex-row md:justify-between mb-4">
+        <SearchBar search={search} setSearch={setSearch} />
+        <Filters
+          filterClassification={filterClassification}
+          setFilterClassification={setFilterClassification}
+          filterCategory={filterCategory}
+          setFilterCategory={setFilterCategory}
+          filterStatus={filterStatus}
+          setFilterStatus={setFilterStatus}
+        />
       </div>
 
       {/* Table */}
-      <Table
+      <Tables
         items={paginatedItems}
         currentPage={currentPage}
         itemsPerPage={itemsPerPage}
@@ -149,7 +145,7 @@ function SpeciesTable() {
         totalPages={totalPages}
         setCurrentPage={setCurrentPage}
       />
-    </>
+    </div>
   );
 }
 

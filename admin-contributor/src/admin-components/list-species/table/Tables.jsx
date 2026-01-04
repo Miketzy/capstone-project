@@ -1,44 +1,40 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import ActionsButton from "../action-button/ActionsButton";
 
 function Tables({ items, currentPage, itemsPerPage }) {
-  const tableContainerRef = useRef(null);
-
-  // Optional: auto-scroll to right on load
-  useEffect(() => {
-    const container = tableContainerRef.current;
-    if (container && container.scrollWidth > container.clientWidth) {
-      container.scrollLeft = container.scrollWidth; // scroll to right
-    }
-  }, [items]); // scroll whenever items change
-
   return (
-    <div
-      ref={tableContainerRef}
-      className="overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100"
-    >
-      <table className="min-w-full border border-gray-200 rounded-lg">
+    <div className="overflow-x-auto w-full">
+      <table className="min-w-full border border-gray-200 rounded-lg text-sm">
         <thead className="bg-gray-100">
           <tr>
-            <th className="px-4 py-2 text-left">No.</th>
-            <th className="px-4 py-2 text-left">Name</th>
-            <th className="px-4 py-2 text-left">Classification</th>
-            <th className="px-4 py-2 text-left">Category</th>
-            <th className="px-4 py-2 text-left">Status</th>
-            <th className="px-4 py-2 text-left">Action</th>
+            <th className="px-3 py-2">No.</th>
+            <th className="px-3 py-2">Name</th>
+
+            <th className="px-3 py-2 hidden sm:table-cell">Classification</th>
+            <th className="px-3 py-2 hidden md:table-cell">Category</th>
+            <th className="px-3 py-2 hidden lg:table-cell">Status</th>
+
+            <th className="px-3 py-2">Action</th>
           </tr>
         </thead>
+
         <tbody>
           {items.map((item, index) => (
             <tr key={item.id} className="border-t hover:bg-gray-50">
-              <td className="px-4 py-2">
+              <td className="px-3 py-2">
                 {(currentPage - 1) * itemsPerPage + index + 1}
               </td>
-              <td className="px-4 py-2">{item.name}</td>
-              <td className="px-4 py-2">{item.classification}</td>
-              <td className="px-4 py-2">{item.category}</td>
-              <td className="px-4 py-2">{item.status}</td>
-              <td className="px-4 py-2">
+              <td className="px-3 py-2 font-medium">{item.name}</td>
+
+              <td className="px-3 py-2 hidden sm:table-cell">
+                {item.classification}
+              </td>
+              <td className="px-3 py-2 hidden md:table-cell">
+                {item.category}
+              </td>
+              <td className="px-3 py-2 hidden lg:table-cell">{item.status}</td>
+
+              <td className="px-3 py-2">
                 <ActionsButton
                   onView={() => alert(`View ${item.name}`)}
                   onEdit={() => alert(`Edit ${item.name}`)}

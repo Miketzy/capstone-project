@@ -1,5 +1,3 @@
-import React from "react";
-
 function Filters({
   filterClassification,
   setFilterClassification,
@@ -9,7 +7,7 @@ function Filters({
   setFilterStatus,
 }) {
   return (
-    <div className="flex gap-2 flex-wrap mb-4">
+    <div className="flex flex-wrap gap-2">
       <select
         value={filterClassification}
         onChange={(e) => setFilterClassification(e.target.value)}
