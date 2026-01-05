@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ContributorPaginattion from "./ContributorPaginattion";
 
 const contributors = [
   { id: 1, name: "Juan Dela Cruz", role: "Developer", status: "Active" },
@@ -23,9 +24,9 @@ const contributors = [
 function ContributorTable() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
-  const entriesPerPage = 10;
+  const entriesPerPage = 5;
 
-  // Filter contributors based on tab
+  // Filter
   const filteredContributors =
     activeFilter === "All"
       ? contributors
@@ -41,19 +42,19 @@ function ContributorTable() {
 
   return (
     <div className="flex flex-col gap-4">
-      {/* Navigation / Tabs */}
-      <div className="flex gap-3 mb-4 justify-center">
+      {/* Tabs */}
+      <div className="flex gap-3 justify-center">
         {["All", "Active", "Inactive"].map((filter) => (
           <button
             key={filter}
             onClick={() => {
               setActiveFilter(filter);
-              setCurrentPage(1); // reset page on filter change
+              setCurrentPage(1);
             }}
-            className={`px-4 py-2 rounded-lg font-medium transition cursor-pointer ${
+            className={`px-4 py-2 rounded-lg font-medium ${
               activeFilter === filter
-                ? "bg-gradient-to-r from-[#379564] to-[#22573b] text-white shadow-md"
-                : "bg-white hover:bg-gradient-to-r hover:from-[#379564] hover:to-[#22573b] hover:text-white"
+                ? "bg-green-600 text-white"
+                : "bg-white border hover:bg-green-100"
             }`}
           >
             {filter}
@@ -72,30 +73,28 @@ function ContributorTable() {
             </tr>
           </thead>
           <tbody>
-            {currentContributors.map((contributor) => (
-              <tr
-                key={contributor.id}
-                className="border-t hover:bg-gray-50 transition"
-              >
-                <td className="px-4 py-2">{contributor.name}</td>
-                <td className="px-4 py-2">{contributor.role}</td>
+            {currentContributors.map((c) => (
+              <tr key={c.id} className="border-t">
+                <td className="px-4 py-2">{c.name}</td>
+                <td className="px-4 py-2">{c.role}</td>
                 <td className="px-4 py-2">
                   <span
-                    className={`px-3 py-1 text-sm rounded-full font-medium ${
-                      contributor.status === "Active"
+                    className={`px-3 py-1 rounded-full text-sm ${
+                      c.status === "Active"
                         ? "bg-green-100 text-green-700"
                         : "bg-red-100 text-red-700"
                     }`}
                   >
-                    {contributor.status}
+                    {c.status}
                   </span>
                 </td>
               </tr>
             ))}
+
             {currentContributors.length === 0 && (
               <tr>
-                <td colSpan="3" className="px-4 py-4 text-center text-gray-500">
-                  No contributors found.
+                <td colSpan="3" className="text-center py-4 text-gray-500">
+                  No contributors found
                 </td>
               </tr>
             )}
@@ -103,23 +102,13 @@ function ContributorTable() {
         </table>
       </div>
 
-      {/* Pagination */}
+      {/* Pagination Component */}
       {totalPages > 1 && (
-        <div className="flex justify-center gap-2 mt-4">
-          {Array.from({ length: totalPages }, (_, i) => (
-            <button
-              key={i + 1}
-              onClick={() => setCurrentPage(i + 1)}
-              className={`px-3 py-1 rounded-md font-medium cursor-pointer border transition ${
-                currentPage === i + 1
-                  ? "bg-gradient-to-r from-[#379564] to-[#22573b] text-white shadow-md"
-                  : "bg-white hover:bg-gray-100"
-              }`}
-            >
-              {i + 1}
-            </button>
-          ))}
-        </div>
+        <ContributorPaginattion
+          currentPage={currentPage}
+          totalPages={totalPages}
+          setCurrentPage={setCurrentPage}
+        />
       )}
     </div>
   );
