@@ -14,17 +14,13 @@ function Create() {
 
   const handleEdit = (id) => {
     setOptions((prev) =>
-      prev.map((opt) =>
-        opt.id === id ? { ...opt, editable: true } : opt
-      )
+      prev.map((opt) => (opt.id === id ? { ...opt, editable: true } : opt))
     );
   };
 
   const handleChange = (id, value) => {
     setOptions((prev) =>
-      prev.map((opt) =>
-        opt.id === id ? { ...opt, text: value } : opt
-      )
+      prev.map((opt) => (opt.id === id ? { ...opt, text: value } : opt))
     );
   };
 
@@ -50,4 +46,38 @@ function Create() {
           <select
             value={questionType}
             onChange={(e) => setQuestionType(e.target.value)}
-            className="w-full border border-gray-300 rou
+            className="w-full border border-gray-300 rounded-lg px-4 py-2"
+          >
+            <option value="" disabled>
+              Select question type
+            </option>
+            <option value="multiple">Multiple Choice</option>
+            <option value="essay">Essay</option>
+            <option value="truefalse">True / False</option>
+            <option value="matching">Matching Type</option>
+          </select>
+        </div>
+
+        {/* MULTIPLE CHOICE */}
+        {questionType === "multiple" && (
+          <>
+            <QuestionInput />
+            <MultipleChoiceOptions
+              options={options}
+              handleChange={handleChange}
+              handleEdit={handleEdit}
+              handleCorrect={handleCorrect}
+            />
+          </>
+        )}
+
+        {/* OTHER TYPES */}
+        {questionType !== "multiple" && questionType !== "matching" && (
+          <QuestionInput />
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default Create;
