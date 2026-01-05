@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import MultipleOptionRow from "./multiple-chice/MultipleOptionRow";
 
 function Create() {
   const [questionType, setQuestionType] = useState("");
-
   const [options, setOptions] = useState([
     { id: 1, text: "", editable: true, correct: false },
     { id: 2, text: "", editable: false, correct: false },
@@ -38,11 +38,11 @@ function Create() {
   };
 
   return (
-    <div className="w-full">
-      <div className="w-full bg-white rounded-2xl shadow-md p-6 space-y-6">
+    <div className="w-full p-6 bg-gray-100 min-h-screen">
+      <div className="w-full max-w-3xl mx-auto bg-white rounded-2xl shadow-md p-6 space-y-6">
         <h2 className="text-xl font-semibold">Create Question</h2>
 
-        {/* Question */}
+        {/* Question Input */}
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-gray-700">
             Write your question here
@@ -62,7 +62,6 @@ function Create() {
 
           <div className="relative flex items-center">
             <div className="absolute left-3 text-gray-400">🖼️</div>
-
             <select
               value={questionType}
               onChange={(e) => setQuestionType(e.target.value)}
@@ -75,7 +74,6 @@ function Create() {
               <option value="essay">Essay</option>
               <option value="truefalse">True / False</option>
             </select>
-
             <span className="absolute right-4 text-sm font-medium text-gray-600">
               {questionType ? typeLabel[questionType] : ""}
             </span>
@@ -102,41 +100,13 @@ function Create() {
           </label>
 
           {options.map((opt) => (
-            <div
+            <MultipleOptionRow
               key={opt.id}
-              className="flex items-center gap-3 border border-gray-300 rounded-lg px-3 py-2"
-            >
-              {/* Correct */}
-              <input
-                type="radio"
-                checked={opt.correct}
-                onChange={() => handleCorrect(opt.id)}
-              />
-
-              {/* Option input */}
-              <input
-                type="text"
-                value={opt.text}
-                onChange={(e) => handleChange(opt.id, e.target.value)}
-                disabled={!opt.editable}
-                placeholder={`Option ${opt.id}`}
-                className={`flex-1 outline-none bg-transparent ${
-                  !opt.editable ? "cursor-not-allowed text-gray-400" : ""
-                }`}
-              />
-
-              {/* Icons */}
-              <div className="flex items-center gap-3 text-gray-500">
-                <button
-                  type="button"
-                  onClick={() => handleEdit(opt.id)}
-                  className="hover:text-green-600"
-                >
-                  ✏️
-                </button>
-                <span className="cursor-pointer">⋮</span>
-              </div>
-            </div>
+              option={opt}
+              handleChange={handleChange}
+              handleEdit={handleEdit}
+              handleCorrect={handleCorrect}
+            />
           ))}
         </div>
       </div>
