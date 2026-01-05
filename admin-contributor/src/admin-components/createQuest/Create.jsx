@@ -38,8 +38,8 @@ function Create() {
   };
 
   return (
-    <div className="w-full p-6 bg-gray-100 min-h-screen">
-      <div className="w-full max-w-3xl mx-auto bg-white rounded-2xl shadow-md p-6 space-y-6">
+    <div className="w-full ">
+      <div className="w-full bg-white rounded-2xl shadow-md p-6 space-y-6">
         <h2 className="text-xl font-semibold">Create Question</h2>
 
         {/* Question Input */}
