@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import QuestionInput from "./QuestionInput";
-import MultipleChoiceOptions from "./multiple-chice/MultipleChoiceOptions";
+import MultipleChoiceOptions from "./multiple-chice/MultipleOptionRow";
 
 function Create() {
   const [questionType, setQuestionType] = useState("");
