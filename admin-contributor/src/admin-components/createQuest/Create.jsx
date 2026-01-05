@@ -3,10 +3,38 @@ import React, { useState } from "react";
 function Create() {
   const [questionType, setQuestionType] = useState("");
 
+  const [options, setOptions] = useState([
+    { id: 1, text: "", editable: true, correct: false },
+    { id: 2, text: "", editable: false, correct: false },
+    { id: 3, text: "", editable: false, correct: false },
+    { id: 4, text: "", editable: false, correct: false },
+  ]);
+
   const typeLabel = {
     multiple: "Multiple Choice",
     essay: "Essay",
     truefalse: "True / False",
+  };
+
+  const handleEdit = (id) => {
+    setOptions((prev) =>
+      prev.map((opt) => (opt.id === id ? { ...opt, editable: true } : opt))
+    );
+  };
+
+  const handleChange = (id, value) => {
+    setOptions((prev) =>
+      prev.map((opt) => (opt.id === id ? { ...opt, text: value } : opt))
+    );
+  };
+
+  const handleCorrect = (id) => {
+    setOptions((prev) =>
+      prev.map((opt) => ({
+        ...opt,
+        correct: opt.id === id,
+      }))
+    );
   };
 
   return (
@@ -73,24 +101,39 @@ function Create() {
             Input options for this answer and select the correct answer
           </label>
 
-          {[1, 2, 3, 4].map((item) => (
+          {options.map((opt) => (
             <div
-              key={item}
+              key={opt.id}
               className="flex items-center gap-3 border border-gray-300 rounded-lg px-3 py-2"
             >
-              {/* Correct checkbox */}
-              <input type="checkbox" className="w-4 h-4" />
+              {/* Correct */}
+              <input
+                type="radio"
+                checked={opt.correct}
+                onChange={() => handleCorrect(opt.id)}
+              />
 
               {/* Option input */}
               <input
                 type="text"
-                placeholder={`Option ${item}`}
-                className="flex-1 outline-none"
+                value={opt.text}
+                onChange={(e) => handleChange(opt.id, e.target.value)}
+                disabled={!opt.editable}
+                placeholder={`Option ${opt.id}`}
+                className={`flex-1 outline-none bg-transparent ${
+                  !opt.editable ? "cursor-not-allowed text-gray-400" : ""
+                }`}
               />
 
               {/* Icons */}
               <div className="flex items-center gap-3 text-gray-500">
-                <span className="cursor-pointer">✏️</span>
+                <button
+                  type="button"
+                  onClick={() => handleEdit(opt.id)}
+                  className="hover:text-green-600"
+                >
+                  ✏️
+                </button>
                 <span className="cursor-pointer">⋮</span>
               </div>
             </div>
