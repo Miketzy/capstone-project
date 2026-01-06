@@ -2,7 +2,7 @@ import React from "react";
 
 function MultipleOptionRow() {
   return (
-    <div className="w-full flex flex-col gap-2">
+    <div className="w-full flex flex-col gap-3">
       <label className="text-sm font-medium text-gray-700">
         Write your question here
       </label>
