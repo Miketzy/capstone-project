@@ -11,12 +11,19 @@ function AddSpecies() {
           {/* Other Input Fields */}
           <AddSpeciesInput />
           {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full bg-gradient-to-r from-[#379564] to-[#22573b] text-white py-2 rounded-lg hover:opacity-90 transition"
-          >
-            Add Species
-          </button>
+          {/* Create Button */}
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="
+    bg-gradient-to-r from-[#379564] to-[#22573b] text-white
+    hover:from-[#2f7f55] hover:to-[#1b4530]
+    px-6 py-2 rounded-lg transition-all duration-300 cursor-pointer
+  "
+            >
+              Add Species
+            </button>
+          </div>
         </form>
       </div>
     </>
