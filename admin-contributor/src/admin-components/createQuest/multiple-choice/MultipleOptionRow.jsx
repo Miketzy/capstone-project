@@ -3,8 +3,14 @@ import React from "react";
 function MultipleOptionRow() {
   const options = ["A", "B", "C", "D"];
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you can handle the submit logic, e.g., gather question, points, and options
+    alert("Form submitted!");
+  };
+
   return (
-    <div className="w-full flex flex-col gap-4">
+    <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
       {/* Question Input */}
       <div className="flex flex-col gap-2">
         <label className="text-sm font-medium text-gray-700">
@@ -57,7 +63,15 @@ function MultipleOptionRow() {
           </div>
         ))}
       </div>
-    </div>
+
+      {/* Submit Button */}
+      <button
+        type="submit"
+        className="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+      >
+        Submit
+      </button>
+    </form>
   );
 }
 
