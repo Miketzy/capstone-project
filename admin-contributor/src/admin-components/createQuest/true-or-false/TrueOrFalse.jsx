@@ -71,7 +71,11 @@ function TrueOrFalse({
       <div className="flex justify-center">
         <button
           type="submit"
-          className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+          className="
+    bg-gradient-to-r from-[#379564] to-[#22573b] text-white
+    hover:bg-gradient-to-r hover:from-[#379564] hover:to-[#22573b] hover:text-white
+    px-6 py-2 rounded-lg transition
+  "
         >
           Create Question
         </button>
