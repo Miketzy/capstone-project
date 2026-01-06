@@ -108,7 +108,7 @@ function MatchingTypeCreator() {
         {rows.map((row, rowIndex) => (
           <div
             key={rowIndex}
-            className="flex flex-col lg:flex-row items-start lg:items-center gap-2"
+            className="flex flex-col lg:flex-row items-start gap-2 w-full"
           >
             {/* Row Label */}
             <span className="w-full lg:w-32 font-medium text-gray-800 truncate">
@@ -121,7 +121,7 @@ function MatchingTypeCreator() {
               onChange={(e) =>
                 handleSelectMatch(rowIndex, Number(e.target.value))
               }
-              className="flex-1 border border-gray-300 rounded-lg px-3 py-2"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2"
             >
               <option value="" disabled>
                 Select match
