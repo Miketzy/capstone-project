@@ -6,7 +6,7 @@ function MultipleOptionRow() {
   return (
     <div className="w-full flex flex-col gap-4">
       {/* Question Input */}
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-2">
         <label className="text-sm font-medium text-gray-700">
           Write your question here
         </label>
@@ -19,7 +19,7 @@ function MultipleOptionRow() {
       </div>
 
       {/* Points Input */}
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-2">
         <label className="text-sm font-medium text-gray-700">
           Points for this answer
         </label>
