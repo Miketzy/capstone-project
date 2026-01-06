@@ -38,7 +38,7 @@ function MatchingTypeCreator() {
   };
 
   return (
-    <div className="w-full ">
+    <div className="w-full flex flex-col gap-4">
       {/* Question Input */}
       <div className="flex flex-col gap-2">
         <label className="font-medium text-gray-700">
@@ -129,18 +129,7 @@ function MatchingTypeCreator() {
         ))}
       </div>
 
-      {/* Create Button */}
-      <div className="flex justify-center">
-        <button
-          onClick={handleCreate}
-          className="
-            bg-gradient-to-r from-[#379564] to-[#22573b] text-white
-            hover:from-[#2f7f55] hover:to-[#1b4530]
-            px-6 py-2 rounded-lg transition-all duration-300 cursor-pointer
-          "
-        >
-          Create Question
-        </button>
+     
       </div>
     </div>
   );
