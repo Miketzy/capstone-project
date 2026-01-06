@@ -31,7 +31,7 @@ function Essay({ question, setQuestion, answer, setAnswer, onCreate }) {
       {/* Expected Answer */}
       <div className="flex flex-col gap-2">
         <label className="text-sm font-medium text-gray-700">
-          Expected Answer (Teacher Only)
+          Expected Answer
         </label>
         <textarea
           rows={4}
