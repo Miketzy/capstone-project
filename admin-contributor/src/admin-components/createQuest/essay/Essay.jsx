@@ -2,7 +2,7 @@ import React from "react";
 
 function Essay({ question, setQuestion, answer, setAnswer, onCreate }) {
   return (
-    <div className="w-full max-w-2xl mx-auto p-4 flex flex-col gap-4">
+    <div className="w-full flex flex-col gap-4">
       <h2 className="text-lg font-semibold text-gray-800">Essay Question</h2>
 
       {/* Question */}
