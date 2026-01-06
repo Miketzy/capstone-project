@@ -100,18 +100,22 @@ function MatchingTypeCreator() {
       </div>
 
       {/* Correct Matches */}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         <label className="font-medium text-gray-700">
           Select correct match:
         </label>
+
         {rows.map((row, rowIndex) => (
           <div
             key={rowIndex}
-            className="flex flex-col lg:flex-row items-center gap-2"
+            className="flex flex-col lg:flex-row items-start lg:items-center gap-2"
           >
-            <span className="w-24 truncate">
+            {/* Row Label */}
+            <span className="w-full lg:w-32 font-medium text-gray-800 truncate">
               {row || `Row ${rowIndex + 1}`}
             </span>
+
+            {/* Column Select */}
             <select
               value={correctMatches[rowIndex] ?? ""}
               onChange={(e) =>
@@ -124,7 +128,7 @@ function MatchingTypeCreator() {
               </option>
               {columns.map((col, colIndex) => (
                 <option key={colIndex} value={colIndex}>
-                  {col}
+                  {col || `Column ${colIndex + 1}`}
                 </option>
               ))}
             </select>
