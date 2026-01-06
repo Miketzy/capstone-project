@@ -46,7 +46,7 @@ function Essay({ question, setQuestion, answer, setAnswer, onCreate }) {
       {/* Submit */}
       <button
         type="submit"
-        className="w-fit bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+        className="w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
       >
         Create Question
       </button>
