@@ -39,7 +39,7 @@ function QuestionInput() {
       <div className="relative">
         <div
           onClick={() => setOpen(!open)}
-          className="w-full border border-gray-300 rounded-lg px-4 py-3 cursor-pointer flex items-center justify-between hover:border-blue-500"
+          className="w-full border border-gray-300 rounded-lg  cursor-pointer flex items-center justify-between hover:border-blue-500"
         >
           {selected ? (
             <div className="flex items-center gap-3">
