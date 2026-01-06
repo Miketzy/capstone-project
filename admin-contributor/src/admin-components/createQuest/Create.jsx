@@ -1,23 +1,25 @@
 import React, { useState } from "react";
 
-const options = [
+const quizTypes = [
   {
-    id: 1,
-    label: "Multiple Choice",
     value: "multiple",
+    label: "Multiple Choice",
     image: "https://cdn-icons-png.flaticon.com/512/1828/1828640.png",
   },
   {
-    id: 2,
-    label: "True or False",
-    value: "truefalse",
-    image: "https://cdn-icons-png.flaticon.com/512/992/992700.png",
+    value: "matching",
+    label: "Matching Type",
+    image: "https://cdn-icons-png.flaticon.com/512/3063/3063826.png",
   },
   {
-    id: 3,
-    label: "Short Answer",
-    value: "short",
+    value: "essay",
+    label: "Essay",
     image: "https://cdn-icons-png.flaticon.com/512/2910/2910791.png",
+  },
+  {
+    value: "trueorfalse",
+    label: "True or False",
+    image: "https://cdn-icons-png.flaticon.com/512/992/992700.png",
   },
 ];
 
@@ -35,7 +37,7 @@ function Create() {
           Select your question Type
         </label>
 
-        {/* Select Box */}
+        {/* Custom Select */}
         <div className="relative">
           <div
             onClick={() => setOpen(!open)}
@@ -51,29 +53,25 @@ function Create() {
                 <span>{selected.label}</span>
               </div>
             ) : (
-              <span className="text-gray-400">Select question type</span>
+              <span className="text-gray-400">-- Select type --</span>
             )}
-            <span>▼</span>
+            <span className="text-gray-500">▼</span>
           </div>
 
-          {/* Dropdown */}
+          {/* Dropdown options */}
           {open && (
             <div className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-2 shadow-lg">
-              {options.map((option) => (
+              {quizTypes.map((type) => (
                 <div
-                  key={option.id}
+                  key={type.value}
                   onClick={() => {
-                    setSelected(option);
+                    setSelected(type);
                     setOpen(false);
                   }}
                   className="flex items-center gap-3 px-4 py-3 cursor-pointer hover:bg-gray-100"
                 >
-                  <img
-                    src={option.image}
-                    alt={option.label}
-                    className="w-6 h-6"
-                  />
-                  <span>{option.label}</span>
+                  <img src={type.image} alt={type.label} className="w-6 h-6" />
+                  <span>{type.label}</span>
                 </div>
               ))}
             </div>
