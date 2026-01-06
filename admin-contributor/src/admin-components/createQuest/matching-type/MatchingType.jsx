@@ -38,7 +38,7 @@ function MatchingTypeCreator() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-4 flex flex-col gap-4">
+    <div className="w-full ">
       {/* Question Input */}
       <div className="flex flex-col gap-2">
         <label className="font-medium text-gray-700">
