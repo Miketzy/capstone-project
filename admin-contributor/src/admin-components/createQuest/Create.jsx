@@ -1,5 +1,5 @@
 import QuestionInput from "./QuestionInput";
-import MultipleChoiceOptions from "./multiple-choice/MultipleChoiceOptions";
+import MultipleChoiceOptions from "./multiple-choice/MultipleOptionRow";
 
 function Create() {
   return (
