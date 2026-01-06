@@ -7,16 +7,8 @@ function TrueOrFalse({
   setCorrectAnswer,
   onCreate,
 }) {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onCreate();
-  };
-
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="w-full max-w-2xl mx-auto p-4 flex flex-col gap-4"
-    >
+    <div className="w-full max-w-2xl mx-auto p-4 flex flex-col gap-4">
       <h2 className="text-lg font-semibold text-gray-800">
         True or False Question
       </h2>
@@ -68,19 +60,20 @@ function TrueOrFalse({
         </div>
       </div>
 
+      {/* Create Button */}
       <div className="flex justify-center">
         <button
-          type="submit"
+          onClick={onCreate}
           className="
-    bg-gradient-to-r from-[#379564] to-[#22573b] text-white
-    hover:from-[#2f7f55] hover:to-[#1b4530]
-    px-6 py-2 rounded-lg transition-all duration-300 cursor-pointer
-  "
+            bg-gradient-to-r from-[#379564] to-[#22573b] text-white
+            hover:from-[#2f7f55] hover:to-[#1b4530]
+            px-6 py-2 rounded-lg transition-all duration-300 cursor-pointer
+          "
         >
           Create Question
         </button>
       </div>
-    </form>
+    </div>
   );
 }
 
