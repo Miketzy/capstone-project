@@ -44,12 +44,14 @@ function Essay({ question, setQuestion, answer, setAnswer, onCreate }) {
       </div>
 
       {/* Submit */}
-      <button
-        type="submit"
-        className="w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
-      >
-        Create Question
-      </button>
+      <div className="flex justify-center">
+        <button
+          type="submit"
+          className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+        >
+          Create Question
+        </button>
+      </div>
     </form>
   );
 }

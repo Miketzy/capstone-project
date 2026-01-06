@@ -68,12 +68,14 @@ function MultipleOptionRow() {
       </div>
 
       {/* Submit Button */}
-      <button
-        type="submit"
-        className="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-      >
-        Submit
-      </button>
+      <div className="flex justify-center">
+        <button
+          type="submit"
+          className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+        >
+          Create Question
+        </button>
+      </div>
     </form>
   );
 }
