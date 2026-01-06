@@ -31,7 +31,7 @@ function QuestionInput() {
       <h1 className="text-xl font-semibold mb-6">Create</h1>
 
       {/* Label */}
-      <label className="text-sm font-medium text-gray-700 mb-2 block">
+      <label className="text-sm font-medium text-gray-700  block">
         Select your question Type
       </label>
 
