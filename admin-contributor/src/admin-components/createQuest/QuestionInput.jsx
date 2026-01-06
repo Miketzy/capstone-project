@@ -23,19 +23,18 @@ const quizTypes = [
   },
 ];
 
-function QuestionInput() {
+function QuestionInput({ onSelectType }) {
   const [selected, setSelected] = useState(null);
   const [open, setOpen] = useState(false);
+
   return (
     <>
       <h1 className="text-xl font-semibold mb-6">Create</h1>
 
-      {/* Label */}
-      <label className="text-sm font-medium text-gray-700  block">
+      <label className="text-sm font-medium text-gray-700 block">
         Select your question Type
       </label>
 
-      {/* Custom Select */}
       <div className="relative">
         <div
           onClick={() => setOpen(!open)}
@@ -56,7 +55,6 @@ function QuestionInput() {
           <span className="text-gray-500">▼</span>
         </div>
 
-        {/* Dropdown options */}
         {open && (
           <div className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-2 shadow-lg">
             {quizTypes.map((type) => (
@@ -65,6 +63,7 @@ function QuestionInput() {
                 onClick={() => {
                   setSelected(type);
                   setOpen(false);
+                  onSelectType(type.value); // <--- dito
                 }}
                 className="flex items-center gap-3 px-4 py-3 cursor-pointer hover:bg-gray-100"
               >
