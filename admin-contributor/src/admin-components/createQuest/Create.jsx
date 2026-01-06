@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import QuestionInput from "./QuestionInput";
 
 function Create() {
