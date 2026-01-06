@@ -43,7 +43,7 @@ function MultipleOptionRow() {
             <input
               type="text"
               placeholder={`Enter option ${letter}...`}
-              className="w-full border border-gray-300 rounded-lg px-10 py-2
+              className="w-full border border-gray-300 rounded-lg px-14 py-2
                          focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             {/* Checkbox + Letter inside input */}
