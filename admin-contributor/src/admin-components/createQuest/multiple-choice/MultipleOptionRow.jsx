@@ -73,8 +73,8 @@ function MultipleOptionRow() {
           type="submit"
           className="
     bg-gradient-to-r from-[#379564] to-[#22573b] text-white
-    hover:bg-gradient-to-r hover:from-[#379564] hover:to-[#22573b] hover:text-white
-    px-6 py-2 rounded-lg transition
+    hover:from-[#2f7f55] hover:to-[#1b4530]
+    px-6 py-2 rounded-lg transition-all duration-300 cursor-pointer
   "
         >
           Create Question
