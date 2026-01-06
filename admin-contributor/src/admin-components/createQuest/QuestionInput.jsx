@@ -29,7 +29,14 @@ function QuestionInput({ onSelectType }) {
 
   return (
     <>
-      <h1 className="text-xl font-semibold mb-6">Create</h1>
+      <h1 className="text-xl font-semibold mb-6 text-center">
+        Create Question
+      </h1>
+
+      <p className="text-gray-800 text-lg md:text-xl font-medium leading-relaxed mb-6">
+        Select the type of question you want to create below. You can create
+        multiple choice, matching, essay, or true/false questions.
+      </p>
 
       <label className="text-sm font-medium text-gray-700 block">
         Select your question Type
