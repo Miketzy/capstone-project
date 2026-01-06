@@ -105,7 +105,10 @@ function MatchingTypeCreator() {
           Select correct match:
         </label>
         {rows.map((row, rowIndex) => (
-          <div key={rowIndex} className="flex items-center gap-2">
+          <div
+            key={rowIndex}
+            className="flex flex-col lg:flex-row items-center gap-2"
+          >
             <span className="w-24 truncate">
               {row || `Row ${rowIndex + 1}`}
             </span>
