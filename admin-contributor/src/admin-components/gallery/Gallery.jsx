@@ -25,10 +25,11 @@ function Gallery() {
   );
 
   return (
-    <div className="w-full bg-white p-4 sm:p-6 rounded-xl shadow-md border border-gray-200 overflow-x-auto">
+    <div>
       {/* Search */}
-      <SearchBar search={search} setSearch={setSearch} />
-
+      <div className="w-full bg-white p-4 sm:p-6 rounded-xl shadow-md border border-gray-200 overflow-x-auto">
+        <SearchBar search={search} setSearch={setSearch} />
+      </div>
       {/* Gallery */}
       <GalleryImage items={filteredItems} />
     </div>
