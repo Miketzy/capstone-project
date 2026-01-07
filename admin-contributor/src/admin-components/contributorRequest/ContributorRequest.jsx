@@ -38,21 +38,23 @@ function ContributorRequest() {
   );
 
   return (
-    <div className="flex flex-col gap-4">
-      {/* Search */}
-      <RequesttSearchBar search={search} setSearch={setSearch} />
+    <div className="p-6 bg-white rounded-xl shadow-md border border-gray-200">
+      <div className="flex flex-col gap-4">
+        {/* Search */}
+        <RequesttSearchBar search={search} setSearch={setSearch} />
 
-      {/* Table */}
-      <RequestTable items={paginatedItems} />
+        {/* Table */}
+        <RequestTable items={paginatedItems} />
 
-      {/* Pagination */}
-      {totalPages > 1 && (
-        <RequestPagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          setCurrentPage={setCurrentPage}
-        />
-      )}
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <RequestPagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            setCurrentPage={setCurrentPage}
+          />
+        )}
+      </div>
     </div>
   );
 }
