@@ -38,7 +38,7 @@ function ContributorRequest() {
   );
 
   return (
-    <div className="p-6 bg-white rounded-xl shadow-md border border-gray-200">
+    <div className="flex-1 p-6 bg-white rounded-xl shadow-md border border-gray-200">
       <div className="flex flex-col gap-4">
         {/* Search */}
         <RequesttSearchBar search={search} setSearch={setSearch} />
