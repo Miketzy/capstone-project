@@ -41,11 +41,15 @@ function Dashboard() {
 
       <div className="flex flex-col lg:flex-row gap-5">
         <div className="flex-1 p-6 bg-white rounded-xl shadow-md border border-gray-200">
-          <h1 className="text-xl font-bold">Analytics</h1>
+          <h1 className="text-xl font-bold">Line Chart</h1>
         </div>
-
-        <div className="flex-1 p-6 bg-white rounded-xl shadow-md border border-gray-200">
-          <h1 className="text-xl font-bold">Analytics</h1>
+        <div className="flex flex-col gap-5">
+          <div className="flex-1 p-6 bg-white rounded-xl shadow-md border border-gray-200">
+            <h1 className="text-xl font-bold">Contributor Count</h1>
+          </div>
+          <div className="flex-1 p-6 bg-white rounded-xl shadow-md border border-gray-200">
+            <h1 className="text-xl font-bold">User Count</h1>
+          </div>
         </div>
       </div>
 
