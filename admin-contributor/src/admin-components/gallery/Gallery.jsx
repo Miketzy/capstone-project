@@ -25,7 +25,7 @@ function Gallery() {
   );
 
   return (
-    <div className="p-6 bg-white rounded-xl shadow-md border border-gray-200">
+    <div className="w-full bg-white p-4 sm:p-6 rounded-xl shadow-md border border-gray-200 overflow-x-auto">
       {/* Search */}
       <SearchBar search={search} setSearch={setSearch} />
 
