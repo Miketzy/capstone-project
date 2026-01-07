@@ -25,13 +25,13 @@ function Gallery() {
   );
 
   return (
-    <>
+    <div className="p-6 bg-white rounded-xl shadow-md border border-gray-200">
       {/* Search */}
       <SearchBar search={search} setSearch={setSearch} />
 
       {/* Gallery */}
       <GalleryImage items={filteredItems} />
-    </>
+    </div>
   );
 }
 
