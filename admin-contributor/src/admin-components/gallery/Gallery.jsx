@@ -25,7 +25,7 @@ function Gallery() {
   );
 
   return (
-    <div>
+    <div className="gap-5">
       {/* Search */}
       <div className="w-full bg-white p-4 sm:p-6 rounded-xl shadow-md border border-gray-200 overflow-x-auto">
         <SearchBar search={search} setSearch={setSearch} />
