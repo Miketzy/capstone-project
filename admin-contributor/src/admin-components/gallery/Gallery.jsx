@@ -27,7 +27,7 @@ function Gallery() {
   return (
     <div className=" flex flex-col gap-5">
       {/* Search */}
-      <div className="w-full bg-white p-4 sm:p-6 rounded-xl shadow-md border border-gray-200 o">
+      <div className="w-full bg-white p-4 sm:p-6 rounded-xl shadow-md border border-gray-200">
         <SearchBar search={search} setSearch={setSearch} />
       </div>
       {/* Gallery */}
