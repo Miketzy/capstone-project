@@ -118,7 +118,7 @@ function SpeciesTable() {
   );
 
   return (
-    <div className="p-6 bg-white rounded-xl shadow-md border border-gray-200">
+    <div className="flex-1 p-6 bg-white rounded-xl shadow-md border border-gray-200">
       {/* Search + Filters */}
       <div className="flex flex-col gap-3 md:flex-row md:justify-between mb-4">
         <SearchBar search={search} setSearch={setSearch} />

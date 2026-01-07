@@ -54,7 +54,7 @@ function Dashboard() {
       </div>
 
       {/**In the Contributor Table, you can see whether a contributor is active or not. */}
-      <div className="p-6 bg-white rounded-xl shadow-md border border-gray-200">
+      <div className="flex-1 p-6 bg-white rounded-xl shadow-md border border-gray-200">
         <ContributorTable />
       </div>
     </div>
