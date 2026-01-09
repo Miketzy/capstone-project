@@ -46,7 +46,9 @@ function Dashboard() {
           <DashboardStat />
         </div>
 
-        <AreaChartCard />
+        <div className="flex-1 p-6 bg-white rounded-xl shadow-md border border-gray-200">
+          <AreaChartCard />
+        </div>
       </div>
 
       {/**In the Contributor Table, you can see whether a contributor is active or not. */}

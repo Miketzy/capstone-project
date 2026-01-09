@@ -27,7 +27,7 @@ const data = [
 
 function AreaChartCard() {
   return (
-    <div className="w-full h-[350px] bg-white p-6 rounded-xl shadow-md border border-gray-200">
+    <>
       <h2 className="text-lg font-semibold mb-4">My First Dataset</h2>
 
       <ResponsiveContainer width="100%" height="100%">
@@ -48,7 +48,7 @@ function AreaChartCard() {
           />
         </AreaChart>
       </ResponsiveContainer>
-    </div>
+    </>
   );
 }
 
