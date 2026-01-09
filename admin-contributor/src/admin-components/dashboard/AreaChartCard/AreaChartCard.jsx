@@ -28,26 +28,34 @@ const data = [
 function AreaChartCard() {
   return (
     <>
-      <h2 className="text-lg font-semibold mb-4">My First Dataset</h2>
+      <h2 className="text-base md:text-lg font-semibold mb-2 md:mb-4">
+        My First Dataset
+      </h2>
 
-      <ResponsiveContainer width="100%" height="100%">
-        <AreaChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="month" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
+      {/* Responsive height */}
+      <div className="w-full h-[260px] md:h-[350px]">
+        <ResponsiveContainer width="100%" height="100%">
+          <AreaChart data={data}>
+            <CartesianGrid strokeDasharray="3 3" />
 
-          <Area
-            type="monotone"
-            dataKey="value"
-            stroke="#22c55e"
-            fill="#bbf7d0"
-            strokeWidth={3}
-            name="My First dataset"
-          />
-        </AreaChart>
-      </ResponsiveContainer>
+            <XAxis dataKey="month" tick={{ fontSize: 10 }} interval={0} />
+
+            <YAxis tick={{ fontSize: 10 }} />
+
+            <Tooltip />
+            <Legend wrapperStyle={{ fontSize: "12px" }} />
+
+            <Area
+              type="monotone"
+              dataKey="value"
+              stroke="#22c55e"
+              fill="#bbf7d0"
+              strokeWidth={2}
+              name="My First dataset"
+            />
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
     </>
   );
 }
