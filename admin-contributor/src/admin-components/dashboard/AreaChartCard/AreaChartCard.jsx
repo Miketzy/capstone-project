@@ -28,19 +28,25 @@ const data = [
 function AreaChartCard() {
   return (
     <>
-      <h2 className="text-base md:text-lg font-semibold mb-2 md:mb-4">
-        My First Dataset
-      </h2>
+      <h2 className="text-base font-semibold mb-2">My First Dataset</h2>
 
-      {/* Responsive height */}
-      <div className="w-full h-[260px] md:h-[350px]">
+      <div className="w-full h-[240px]">
         <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={data}>
+          <AreaChart
+            data={data}
+            margin={{ top: 10, right: 10, left: -10, bottom: 0 }}
+          >
             <CartesianGrid strokeDasharray="3 3" />
 
-            <XAxis dataKey="month" tick={{ fontSize: 10 }} interval={0} />
+            <XAxis
+              dataKey="month"
+              tick={{ fontSize: 10 }}
+              interval="preserveStartEnd"
+              minTickGap={4}
+              tickMargin={6}
+            />
 
-            <YAxis tick={{ fontSize: 10 }} />
+            <YAxis tick={{ fontSize: 10 }} width={30} />
 
             <Tooltip />
             <Legend wrapperStyle={{ fontSize: "12px" }} />
@@ -51,6 +57,7 @@ function AreaChartCard() {
               stroke="#22c55e"
               fill="#bbf7d0"
               strokeWidth={2}
+              dot={false}
               name="My First dataset"
             />
           </AreaChart>
