@@ -3,6 +3,7 @@ import VertebratesCard from "./vertebratesCard/VertebratesCard";
 import InvertebratesCard from "./invertebratesCard/InvertebratesCard";
 import ContributorTable from "./contributorTable/ContributorTable";
 import DashboardStat from "./dashboardStat/DashboardStat";
+import AreaChartCard from "./AreaChartCard/AreaChartCard";
 
 function Dashboard() {
   const [activeTab, setActiveTab] = useState("vertebrates"); // default active
@@ -46,7 +47,7 @@ function Dashboard() {
         </div>
 
         <div className="flex-1 p-6 bg-white rounded-xl shadow-md border border-gray-200">
-          <h1 className="text-xl font-bold">Line Chart</h1>
+          <AreaChartCard />
         </div>
       </div>
 
