@@ -26,9 +26,17 @@ const data = [
 ];
 
 function AreaChartCard() {
+  const currentYear = new Date().getFullYear(); // 🔥 auto year
+
   return (
     <>
-      <h2 className="text-base font-semibold mb-2">My First Dataset</h2>
+      {/* Header */}
+      <div className="flex items-center justify-between mb-2">
+        <h2 className="text-base font-semibold">My First Dataset</h2>
+
+        {/* Year display */}
+        <span className="text-sm font-medium text-gray-600">{currentYear}</span>
+      </div>
 
       <div className="w-full h-[230px]">
         <ResponsiveContainer width="100%" height="100%">
