@@ -11,6 +11,9 @@ import {
 } from "recharts";
 
 const data = [
+  { month: "January", value: 82 },
+  { month: "February", value: 55 },
+  { month: "March", value: 82 },
   { month: "April", value: 82 },
   { month: "May", value: 55 },
   { month: "June", value: 54 },
