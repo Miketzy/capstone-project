@@ -15,35 +15,33 @@ const data = [
   { label: "Pinterest", count: 500, percent: 50 },
 ];
 
-function Bargraph() {
+export default function Bargraph() {
   return (
-    <div className="w-full max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow">
+    <div className="w-full max-w-5xl mx-auto p-6 bg-white rounded-2xl shadow">
       <h2 className="text-xl font-semibold text-center mb-6">
         Most Popular Apps Among Teens
       </h2>
 
-      <div className="flex items-end justify-between h-64 gap-4 overflow-x-auto">
+      {/* CHART CONTAINER (MAY HEIGHT – IMPORTANT) */}
+      <div className="flex items-end gap-4 h-[320px] overflow-x-auto">
         {data.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center min-w-[60px] flex-1"
-          >
-            {/* Numbers on top */}
+          <div key={index} className="flex flex-col items-center min-w-[70px]">
+            {/* VALUES ON TOP */}
             <div className="mb-2 text-sm font-semibold text-gray-700 text-center">
               <div>{item.count}</div>
               <div>{item.percent}%</div>
             </div>
 
-            {/* Bar */}
-            <div className="w-full bg-gray-200 rounded-lg h-full flex items-end">
+            {/* BAR */}
+            <div className="w-10 h-full bg-gray-200 rounded-lg flex items-end">
               <div
                 className="w-full bg-green-500 rounded-lg transition-all duration-500"
                 style={{ height: `${item.percent}%` }}
               />
             </div>
 
-            {/* Label */}
-            <div className="mt-3 text-sm text-gray-600 text-center">
+            {/* LABEL */}
+            <div className="mt-3 text-xs text-gray-600 text-center">
               {item.label}
             </div>
           </div>
@@ -52,5 +50,3 @@ function Bargraph() {
     </div>
   );
 }
-
-export default Bargraph;
