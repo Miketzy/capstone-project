@@ -1,9 +1,12 @@
 import React from "react";
+import Bargraph from "./bargraph/Bargraph";
 
 function Analytics() {
   return (
     <>
-      <div>Analytics</div>
+      <div className="bg-white p-4 rounded-lg shadow">
+        <Bargraph />
+      </div>
     </>
   );
 }
