@@ -23,7 +23,7 @@ export default function Bargraph() {
       </h2>
 
       {/* CHART AREA */}
-      <div className="flex items-end gap-6 overflow-x-auto pb-4">
+      <div className="flex items-end gap-3 overflow-x-auto pb-4">
         {data.map((item, index) => (
           <div key={index} className="flex flex-col items-center min-w-[80px]">
             {/* VALUES ON TOP */}
