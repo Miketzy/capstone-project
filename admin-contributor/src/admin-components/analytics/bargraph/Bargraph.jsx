@@ -17,23 +17,23 @@ const data = [
 
 export default function Bargraph() {
   return (
-    <div className="w-full max-w-5xl mx-auto p-6 bg-white rounded-2xl shadow">
-      <h2 className="text-xl font-semibold text-center mb-6">
+    <div className="w-full max-w-6xl mx-auto p-6 bg-white rounded-2xl shadow">
+      <h2 className="text-xl font-semibold text-center mb-8">
         Most Popular Apps Among Teens
       </h2>
 
-      {/* CHART CONTAINER (MAY HEIGHT – IMPORTANT) */}
-      <div className="flex items-end gap-4 h-[320px] overflow-x-auto">
+      {/* CHART AREA */}
+      <div className="flex items-end gap-6 overflow-x-auto pb-4">
         {data.map((item, index) => (
-          <div key={index} className="flex flex-col items-center min-w-[70px]">
+          <div key={index} className="flex flex-col items-center min-w-[80px]">
             {/* VALUES ON TOP */}
             <div className="mb-2 text-sm font-semibold text-gray-700 text-center">
               <div>{item.count}</div>
               <div>{item.percent}%</div>
             </div>
 
-            {/* BAR */}
-            <div className="w-10 h-full bg-gray-200 rounded-lg flex items-end">
+            {/* BAR CONTAINER (FIXED HEIGHT) */}
+            <div className="w-10 h-[220px] bg-gray-200 rounded-lg flex items-end">
               <div
                 className="w-full bg-green-500 rounded-lg transition-all duration-500"
                 style={{ height: `${item.percent}%` }}
