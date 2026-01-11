@@ -1,18 +1,18 @@
 import React from "react";
 
 const data = [
-  { label: "Instagram", count: 850, percent: 85 },
-  { label: "TikTok", count: 880, percent: 88 },
-  { label: "Snapchat", count: 750, percent: 75 },
-  { label: "YouTube", count: 920, percent: 92 },
-  { label: "Discord", count: 600, percent: 60 },
-  { label: "X", count: 450, percent: 45 },
-  { label: "Facebook", count: 300, percent: 30 },
-  { label: "Messenger", count: 700, percent: 70 },
-  { label: "WhatsApp", count: 680, percent: 68 },
-  { label: "Telegram", count: 400, percent: 40 },
-  { label: "Reddit", count: 350, percent: 35 },
-  { label: "Pinterest", count: 500, percent: 50 },
+  { label: "Mammals", count: 850, percent: 85 },
+  { label: "Fish", count: 880, percent: 88 },
+  { label: "Birds", count: 750, percent: 75 },
+  { label: "Reptiles", count: 920, percent: 92 },
+  { label: "Amphibians", count: 600, percent: 60 },
+  { label: "Insects", count: 450, percent: 45 },
+  { label: "Arachnids", count: 300, percent: 30 },
+  { label: "Mollusks", count: 700, percent: 70 },
+  { label: "Echinoderms", count: 680, percent: 68 },
+  { label: "Cnidarians", count: 400, percent: 40 },
+  { label: "Worms", count: 350, percent: 35 },
+  { label: "Sponges", count: 500, percent: 50 },
 ];
 
 export default function Bargraph() {
