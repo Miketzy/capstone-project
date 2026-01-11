@@ -2,21 +2,21 @@ import React, { useState } from "react";
 import ContributorPaginattion from "./ContributorPaginattion";
 
 const contributors = [
-  { id: 1, name: "Juan Dela Cruz", role: "Developer", status: "Active" },
-  { id: 2, name: "Maria Santos", role: "Designer", status: "Inactive" },
-  { id: 3, name: "Pedro Reyes", role: "QA Tester", status: "Active" },
-  { id: 4, name: "Ana Lopez", role: "Content Writer", status: "Inactive" },
-  { id: 5, name: "Luis Ramos", role: "Developer", status: "Active" },
-  { id: 6, name: "Cathy Villanueva", role: "Designer", status: "Inactive" },
-  { id: 7, name: "Mark Tan", role: "QA Tester", status: "Active" },
-  { id: 8, name: "Elaine Cruz", role: "Content Writer", status: "Inactive" },
-  { id: 9, name: "Jorge Santos", role: "Developer", status: "Active" },
-  { id: 10, name: "Anna Reyes", role: "Designer", status: "Inactive" },
-  { id: 11, name: "Miguel Lopez", role: "QA Tester", status: "Active" },
+  { id: 1, name: "Juan Dela Cruz", role: "Contributor", status: "Active" },
+  { id: 2, name: "Maria Santos", role: "Contributor", status: "Inactive" },
+  { id: 3, name: "Pedro Reyes", role: "Contributor", status: "Active" },
+  { id: 4, name: "Ana Lopez", role: "Contributor", status: "Inactive" },
+  { id: 5, name: "Luis Ramos", role: "Contributor", status: "Active" },
+  { id: 6, name: "Cathy Villanueva", role: "Contributor", status: "Inactive" },
+  { id: 7, name: "Mark Tan", role: "Contributor", status: "Active" },
+  { id: 8, name: "Elaine Cruz", role: "Contributor", status: "Inactive" },
+  { id: 9, name: "Jorge Santos", role: "Contributor", status: "Active" },
+  { id: 10, name: "Anna Reyes", role: "Contributor", status: "Inactive" },
+  { id: 11, name: "Miguel Lopez", role: "Contributor", status: "Active" },
   {
     id: 12,
     name: "Sophia Dela Cruz",
-    role: "Content Writer",
+    role: "Contributor",
     status: "Inactive",
   },
 ];
