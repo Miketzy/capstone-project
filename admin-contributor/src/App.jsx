@@ -37,7 +37,7 @@ function App() {
   return (
    <div className="container-layout">
   <div className="layout">
-    <aside className="sticky top-0 h-dvh overflow-y-auto ">
+    <aside className="w-64 h-full bg-white flex flex-col justify-between overflow-y-auto">
       <Sidebar currentPage={currentPage} onPageChange={setCurrentPage} />
     </aside>
 
