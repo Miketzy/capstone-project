@@ -35,8 +35,8 @@ function App() {
   const ActivePage = PAGES[currentPage] ?? Dashboard;
 
   return (
-    <div className="container-layout h-screen">
-      <div className="layout h-full flex">
+    <div className="container-layout min-h-dvh">
+      <div className="layout h-dvh flex">
         <Sidebar currentPage={currentPage} onPageChange={setCurrentPage} />
 
         <div className="flex-1 flex flex-col h-full">
