@@ -48,8 +48,9 @@ function App() {
                 <ActivePage />
               </Suspense>
             </div>
-            <Footer />
+           
           </main>
+           <Footer />
         </div>
       </div>
 
