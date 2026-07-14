@@ -50,8 +50,9 @@ function App() {
             </div>
            
           </main>
-           <Footer />
+         
         </div>
+          <Footer />
       </div>
 
       <div className="block md:hidden py-10">
