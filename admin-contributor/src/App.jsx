@@ -35,11 +35,11 @@ function App() {
   const ActivePage = PAGES[currentPage] ?? Dashboard;
 
   return (
-    <div className="container-layout">
-      <div className="layout">
+    <div className="container-layout h-screen">
+      <div className="layout h-full flex">
         <Sidebar currentPage={currentPage} onPageChange={setCurrentPage} />
 
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 flex flex-col h-full">
           <Header />
 
           <main className="flex-1 overflow-y-auto bg-transparent">
