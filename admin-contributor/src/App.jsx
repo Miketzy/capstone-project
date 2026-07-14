@@ -42,7 +42,7 @@ function App() {
         <div className="flex-1 flex flex-col h-full">
           <Header />
 
-          <main className="flex-1 overflow-y-auto bg-transparent">
+          <main className="flex-1  bg-transparent">
             <div className="p-6 space-y-6">
               <Suspense fallback={<PageLoader />}>
                 <ActivePage />
