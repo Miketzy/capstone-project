@@ -35,29 +35,31 @@ function App() {
   const ActivePage = PAGES[currentPage] ?? Dashboard;
 
   return (
-    <div className="container-layout min-h-dvh">
-      <div className="layout h-dvh flex">
-        <Sidebar currentPage={currentPage} onPageChange={setCurrentPage} />
+   <div className="container-layout">
+  <div className="layout">
+    <aside className="sticky top-0 h-dvh overflow-y-auto shrink-0">
+      <Sidebar currentPage={currentPage} onPageChange={setCurrentPage} />
+    </aside>
 
-        <div className="flex-1 flex flex-col h-full">
-          <Header />
+    <div className="flex-1 flex flex-col">
+      <Header />
 
-          <main className="flex-1  bg-transparent">
-            <div className="p-6 space-y-6">
-              <Suspense fallback={<PageLoader />}>
-                <ActivePage />
-              </Suspense>
-            </div>
-           
-          </main>
-           <Footer />
+      <main className="flex-1 bg-transparent">
+        <div className="p-6 space-y-6">
+          <Suspense fallback={<PageLoader />}>
+            <ActivePage />
+          </Suspense>
         </div>
-      </div>
+      </main>
 
-      <div className="block md:hidden py-10">
-        <Navbar currentPage={currentPage} onPageChange={setCurrentPage} />
-      </div>
+      <Footer />
     </div>
+  </div>
+
+  <div className="block md:hidden py-10">
+    <Navbar currentPage={currentPage} onPageChange={setCurrentPage} />
+  </div>
+</div>
   );
 }
 
