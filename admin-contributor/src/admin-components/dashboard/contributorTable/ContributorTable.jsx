@@ -1,6 +1,5 @@
-
-import React, { useState } from "react";
-import ContributorPaginattion from "./ContributorPaginattion";
+import React, { useState, useMemo } from "react";
+import ContributorPagination from "./ContributorPagination";
 
 const contributors = [
   { id: 1, name: "Juan Dela Cruz", role: "Contributor", status: "Active" },
@@ -22,45 +21,74 @@ const contributors = [
   },
 ];
 
-function ContributorTable() {
+function ContributorTable({ entriesPerPage = 5 }) {
   const [activeFilter, setActiveFilter] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const entriesPerPage = 5;
 
-  // Filter
-  const filteredContributors =
-    activeFilter === "All"
-      ? contributors
-      : contributors.filter((c) => c.status === activeFilter);
+  // Filter by status + search (memoized so it only recomputes when inputs change)
+  const filteredContributors = useMemo(() => {
+    return contributors.filter((c) => {
+      const matchesStatus =
+        activeFilter === "All" || c.status === activeFilter;
+      const matchesSearch = c.name
+        .toLowerCase()
+        .includes(searchTerm.trim().toLowerCase());
+      return matchesStatus && matchesSearch;
+    });
+  }, [activeFilter, searchTerm]);
 
   // Pagination logic
-  const totalPages = Math.ceil(filteredContributors.length / entriesPerPage);
-  const startIndex = (currentPage - 1) * entriesPerPage;
-  const currentContributors = filteredContributors.slice(
-    startIndex,
-    startIndex + entriesPerPage
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filteredContributors.length / entriesPerPage)
   );
+  const startIndex = (currentPage - 1) * entriesPerPage;
+  const currentContributors = useMemo(
+    () => filteredContributors.slice(startIndex, startIndex + entriesPerPage),
+    [filteredContributors, startIndex, entriesPerPage]
+  );
+
+  const handleFilterChange = (filter) => {
+    setActiveFilter(filter);
+    setCurrentPage(1);
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+    setCurrentPage(1);
+  };
 
   return (
     <div className="flex flex-col gap-4">
-      {/* Tabs */}
-      <div className="flex gap-3 justify-center">
-        {["All", "Active", "Inactive"].map((filter) => (
-          <button
-            key={filter}
-            onClick={() => {
-              setActiveFilter(filter);
-              setCurrentPage(1);
-            }}
-            className={`px-4 py-2 rounded-lg font-medium ${
-              activeFilter === filter
-                ? "bg-green-600 text-white"
-                : "bg-white border hover:bg-green-100"
-            }`}
-          >
-            {filter}
-          </button>
-        ))}
+      {/* Tabs + Search */}
+      <div className="flex flex-col sm:flex-row gap-3 justify-between items-center">
+        <div className="flex gap-3" role="tablist" aria-label="Filter contributors by status">
+          {["All", "Active", "Inactive"].map((filter) => (
+            <button
+              key={filter}
+              role="tab"
+              aria-pressed={activeFilter === filter}
+              onClick={() => handleFilterChange(filter)}
+              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                activeFilter === filter
+                  ? "bg-green-600 text-white"
+                  : "bg-white border hover:bg-green-100"
+              }`}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={handleSearchChange}
+          placeholder="Search by name..."
+          aria-label="Search contributors by name"
+          className="px-3 py-2 border rounded-lg w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
       </div>
 
       {/* Table */}
@@ -68,9 +96,9 @@ function ContributorTable() {
         <table className="min-w-full border border-gray-200 rounded-lg">
           <thead className="bg-gray-100">
             <tr>
-              <th className="px-4 py-2 text-left">Name</th>
-              <th className="px-4 py-2 text-left">Role</th>
-              <th className="px-4 py-2 text-left">Status</th>
+              <th scope="col" className="px-4 py-2 text-left">Name</th>
+              <th scope="col" className="px-4 py-2 text-left">Role</th>
+              <th scope="col" className="px-4 py-2 text-left">Status</th>
             </tr>
           </thead>
           <tbody>
@@ -103,9 +131,18 @@ function ContributorTable() {
         </table>
       </div>
 
+      {/* Results count */}
+      {filteredContributors.length > 0 && (
+        <p className="text-sm text-gray-500 text-center sm:text-left">
+          Showing {startIndex + 1}-
+          {Math.min(startIndex + entriesPerPage, filteredContributors.length)}{" "}
+          of {filteredContributors.length} contributors
+        </p>
+      )}
+
       {/* Pagination Component */}
       {totalPages > 1 && (
-        <ContributorPaginattion
+        <ContributorPagination
           currentPage={currentPage}
           totalPages={totalPages}
           setCurrentPage={setCurrentPage}
@@ -116,4 +153,3 @@ function ContributorTable() {
 }
 
 export default ContributorTable;
-
