@@ -18,33 +18,29 @@ const data = [
 export default function Bargraph() {
   return (
     <div className="w-full max-w-6xl mx-auto p-4 sm:p-6 bg-white rounded-2xl shadow">
-      <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6 sm:mb-8">
+      <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-center mb-6 sm:mb-8">
         Number and Species
       </h2>
 
-      {/* CHART AREA */}
-      <div className="flex items-end justify-between gap-2 sm:gap-3 md:gap-4 overflow-x-auto pb-4">
+      <div className="grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-6 md:grid-cols-12 gap-3 sm:gap-4">
         {data.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center w-1/6 sm:w-1/12 min-w-[50px] md:min-w-[60px]"
-          >
-            {/* VALUES ON TOP */}
-            <div className="mb-1 sm:mb-2 text-xs sm:text-sm font-semibold text-gray-700 text-center">
+          <div key={index} className="flex flex-col items-center">
+            {/* NUMBER + PERCENTAGE */}
+            <div className="mb-1 sm:mb-2 text-[11px] sm:text-sm font-semibold text-gray-700 text-center leading-tight">
               <div>{item.count}</div>
-              <div>{item.percent}%</div>
+              <div className="text-gray-400">{item.percent}%</div>
             </div>
 
-            {/* BAR CONTAINER (FIXED HEIGHT) */}
-            <div className="w-full h-[180px] sm:h-[220px] bg-gray-200 rounded-lg flex items-end">
+            {/* BAR */}
+            <div className="w-full h-[110px] sm:h-[160px] md:h-[200px] bg-gray-100 rounded-lg flex items-end overflow-hidden">
               <div
-                className="w-full bg-green-500 rounded-lg transition-all duration-500"
+                className="w-full bg-green-600 rounded-t-lg transition-all duration-500"
                 style={{ height: `${item.percent}%` }}
               />
             </div>
 
             {/* LABEL */}
-            <div className="mt-1 sm:mt-2 text-[9px] sm:text-xs text-gray-600 text-center">
+            <div className="mt-1 sm:mt-2 text-[9px] sm:text-xs text-gray-600 text-center break-words leading-tight">
               {item.label}
             </div>
           </div>
