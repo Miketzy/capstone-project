@@ -5,7 +5,7 @@ function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-gradient-to-r from-[#379564] to-[#22573b] text-white">
+    <footer className="w-full bg-black text-white">
       <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
         {/* Left: Copyright */}
         <p className="text-sm text-center sm:text-left text-white/90">
