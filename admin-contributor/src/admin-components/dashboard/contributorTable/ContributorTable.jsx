@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import ContributorPaginattion from "./ContributorPaginattion";
 
@@ -42,7 +41,7 @@ function ContributorTable() {
   );
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 bg-green-50 p-6 rounded-xl">
       {/* Tabs */}
       <div className="flex gap-3 justify-center">
         {["All", "Active", "Inactive"].map((filter) => (
@@ -52,10 +51,10 @@ function ContributorTable() {
               setActiveFilter(filter);
               setCurrentPage(1);
             }}
-            className={`px-4 py-2 rounded-lg font-medium ${
+            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               activeFilter === filter
                 ? "bg-green-600 text-white"
-                : "bg-white border hover:bg-green-100"
+                : "bg-white border border-gray-300 hover:bg-green-100"
             }`}
           >
             {filter}
@@ -64,37 +63,50 @@ function ContributorTable() {
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto">
-        <table className="min-w-full border border-gray-200 rounded-lg">
+      <div className="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
+        <table className="min-w-full">
           <thead className="bg-gray-100">
             <tr>
-              <th className="px-4 py-2 text-left">Name</th>
-              <th className="px-4 py-2 text-left">Role</th>
-              <th className="px-4 py-2 text-left">Status</th>
+              <th className="px-4 py-3 text-left font-semibold text-gray-800">
+                Name
+              </th>
+              <th className="px-4 py-3 text-left font-semibold text-gray-800">
+                Role
+              </th>
+              <th className="px-4 py-3 text-left font-semibold text-gray-800">
+                Status
+              </th>
             </tr>
           </thead>
           <tbody>
-            {currentContributors.map((c) => (
-              <tr key={c.id} className="border-t">
-                <td className="px-4 py-2">{c.name}</td>
-                <td className="px-4 py-2">{c.role}</td>
-                <td className="px-4 py-2">
-                  <span
-                    className={`px-3 py-1 rounded-full text-sm ${
-                      c.status === "Active"
-                        ? "bg-green-100 text-green-700"
-                        : "bg-red-100 text-red-700"
-                    }`}
-                  >
-                    {c.status}
-                  </span>
+            {currentContributors.map((c, index) => (
+              <tr
+                key={c.id}
+                className={
+                  index !== currentContributors.length - 1
+                    ? "border-b border-gray-200"
+                    : ""
+                }
+              >
+                <td className="px-4 py-3 text-gray-800">{c.name}</td>
+                <td className="px-4 py-3 text-gray-600">{c.role}</td>
+                <td className="px-4 py-3">
+                  {c.status === "Active" ? (
+                    <span className="text-green-600 font-medium text-sm">
+                      Active
+                    </span>
+                  ) : (
+                    <span className="px-3 py-1 rounded-full text-sm bg-red-100 text-red-600 font-medium">
+                      Inactive
+                    </span>
+                  )}
                 </td>
               </tr>
             ))}
 
             {currentContributors.length === 0 && (
               <tr>
-                <td colSpan="3" className="text-center py-4 text-gray-500">
+                <td colSpan={3} className="text-center py-4 text-gray-500">
                   No contributors found
                 </td>
               </tr>
@@ -105,15 +117,16 @@ function ContributorTable() {
 
       {/* Pagination Component */}
       {totalPages > 1 && (
-        <ContributorPaginattion
-          currentPage={currentPage}
-          totalPages={totalPages}
-          setCurrentPage={setCurrentPage}
-        />
+        <div className="flex justify-end">
+          <ContributorPaginattion
+            currentPage={currentPage}
+            totalPages={totalPages}
+            setCurrentPage={setCurrentPage}
+          />
+        </div>
       )}
     </div>
   );
 }
 
 export default ContributorTable;
-
