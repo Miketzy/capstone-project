@@ -41,7 +41,7 @@ function ContributorTable() {
   );
 
   return (
-    <div className="flex flex-col gap-4 rounded-xl">
+    <div className="flex flex-col gap-4 bg-white p-6 rounded-xl">
       {/* Tabs */}
       <div className="flex gap-3 justify-center">
         {["All", "Active", "Inactive"].map((filter) => (
