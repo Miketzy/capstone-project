@@ -32,7 +32,7 @@ export default function Bargraph() {
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center flex-shrink-0 snap-start w-[64px] sm:w-[80px] md:w-[90px]"
+            className="flex flex-col items-center flex-1 snap-start min-w-[52px] sm:min-w-[64px] md:min-w-[70px]"
           >
             {/* VALUES ON TOP */}
             <div className="mb-1 sm:mb-2 text-[11px] sm:text-sm font-semibold text-gray-700 text-center leading-tight">
