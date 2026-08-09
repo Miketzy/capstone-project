@@ -14,7 +14,7 @@ function HeaderLeftSection({
           type="button"
           onClick={onMenuClick}
           aria-label="Open menu"
-          className="p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors"
+          className="hidden md:block w-5 h-5 p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors"
         >
           <Menu className="w-5 h-5" />
         </button>
