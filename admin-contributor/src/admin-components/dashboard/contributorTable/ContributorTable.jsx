@@ -36,7 +36,7 @@ function ContributorTable() {
   );
 
   return (
-    <div className="w-full max-w-full overflow-x-hidden flex flex-col gap-4 p-3  rounded-xl">
+    <div className="w-full  overflow-x-hidden flex flex-col gap-4 p-3 sm:p-6 rounded-xl">
       {/* Tabs */}
       <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
         {["All", "Active", "Inactive"].map((filter) => (
