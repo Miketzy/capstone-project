@@ -16,18 +16,26 @@ const contributors = [
   { id: 12, name: "Sophia Dela Cruz", role: "Contributor", status: "Inactive" },
 ];
 
+function StatusBadge({ status }) {
+  return status === "Active" ? (
+    <span className="text-green-600 font-medium text-sm">Active</span>
+  ) : (
+    <span className="px-3 py-1 rounded-full text-sm bg-red-100 text-red-600 font-medium">
+      Inactive
+    </span>
+  );
+}
+
 function ContributorTable() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
   const entriesPerPage = 5;
 
-  // Filter
   const filteredContributors =
     activeFilter === "All"
       ? contributors
       : contributors.filter((c) => c.status === activeFilter);
 
-  // Pagination logic
   const totalPages = Math.ceil(filteredContributors.length / entriesPerPage);
   const startIndex = (currentPage - 1) * entriesPerPage;
   const currentContributors = filteredContributors.slice(
@@ -36,7 +44,7 @@ function ContributorTable() {
   );
 
   return (
-    <div className="w-full  overflow-x-hidden flex flex-col gap-4 p-3 sm:p-6 rounded-xl">
+    <div className="w-full max-w-full overflow-x-hidden flex flex-col gap-4 p-3 sm:p-6 rounded-xl">
       {/* Tabs */}
       <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
         {["All", "Active", "Inactive"].map((filter) => (
@@ -57,18 +65,18 @@ function ContributorTable() {
         ))}
       </div>
 
-      {/* Table */}
-      <div className="w-full overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
-        <table className="w-full min-w-[500px] table-auto">
+      {/* ===== DESKTOP / TABLET: Table view (hidden on mobile) ===== */}
+      <div className="hidden sm:block w-full overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
+        <table className="w-full table-auto">
           <thead className="bg-gray-100">
             <tr>
-              <th className="px-4 py-3 text-left font-semibold text-gray-800 whitespace-nowrap">
+              <th className="px-4 py-3 text-left font-semibold text-gray-800">
                 Name
               </th>
-              <th className="px-4 py-3 text-left font-semibold text-gray-800 whitespace-nowrap">
+              <th className="px-4 py-3 text-left font-semibold text-gray-800">
                 Role
               </th>
-              <th className="px-4 py-3 text-left font-semibold text-gray-800 whitespace-nowrap">
+              <th className="px-4 py-3 text-left font-semibold text-gray-800">
                 Status
               </th>
             </tr>
@@ -83,22 +91,10 @@ function ContributorTable() {
                     : ""
                 }
               >
-                <td className="px-4 py-3 text-gray-800 whitespace-nowrap">
-                  {c.name}
-                </td>
-                <td className="px-4 py-3 text-gray-600 whitespace-nowrap">
-                  {c.role}
-                </td>
-                <td className="px-4 py-3 whitespace-nowrap">
-                  {c.status === "Active" ? (
-                    <span className="text-green-600 font-medium text-sm">
-                      Active
-                    </span>
-                  ) : (
-                    <span className="px-3 py-1 rounded-full text-sm bg-red-100 text-red-600 font-medium">
-                      Inactive
-                    </span>
-                  )}
+                <td className="px-4 py-3 text-gray-800">{c.name}</td>
+                <td className="px-4 py-3 text-gray-600">{c.role}</td>
+                <td className="px-4 py-3">
+                  <StatusBadge status={c.status} />
                 </td>
               </tr>
             ))}
@@ -112,6 +108,32 @@ function ContributorTable() {
             )}
           </tbody>
         </table>
+      </div>
+
+      {/* ===== MOBILE: Card view (hidden on sm and up) ===== */}
+      <div className="flex sm:hidden flex-col gap-3">
+        {currentContributors.length === 0 && (
+          <div className="text-center py-6 text-gray-500 bg-white rounded-lg border border-gray-200">
+            No contributors found
+          </div>
+        )}
+
+        {currentContributors.map((c) => (
+          <div
+            key={c.id}
+            className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 flex items-center justify-between gap-3"
+          >
+            <div className="flex flex-col gap-1 min-w-0">
+              <span className="font-medium text-gray-800 truncate">
+                {c.name}
+              </span>
+              <span className="text-sm text-gray-500">{c.role}</span>
+            </div>
+            <div className="shrink-0">
+              <StatusBadge status={c.status} />
+            </div>
+          </div>
+        ))}
       </div>
 
       {/* Pagination Component */}
