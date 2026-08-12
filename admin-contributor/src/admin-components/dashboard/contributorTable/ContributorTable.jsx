@@ -49,7 +49,7 @@ function ContributorTable() {
             key={filter}
             onClick={() => {
               setActiveFilter(filter);
-              setCurrentPage(1);
+              setCurrentPage(1); 
             }}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               activeFilter === filter
