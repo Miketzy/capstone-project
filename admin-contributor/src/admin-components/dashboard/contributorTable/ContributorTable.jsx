@@ -13,12 +13,7 @@ const contributors = [
   { id: 9, name: "Jorge Santos", role: "Contributor", status: "Active" },
   { id: 10, name: "Anna Reyes", role: "Contributor", status: "Inactive" },
   { id: 11, name: "Miguel Lopez", role: "Contributor", status: "Active" },
-  {
-    id: 12,
-    name: "Sophia Dela Cruz",
-    role: "Contributor",
-    status: "Inactive",
-  },
+  { id: 12, name: "Sophia Dela Cruz", role: "Contributor", status: "Inactive" },
 ];
 
 function ContributorTable() {
@@ -26,13 +21,11 @@ function ContributorTable() {
   const [currentPage, setCurrentPage] = useState(1);
   const entriesPerPage = 5;
 
-  // Filter
   const filteredContributors =
     activeFilter === "All"
       ? contributors
       : contributors.filter((c) => c.status === activeFilter);
 
-  // Pagination logic
   const totalPages = Math.ceil(filteredContributors.length / entriesPerPage);
   const startIndex = (currentPage - 1) * entriesPerPage;
   const currentContributors = filteredContributors.slice(
@@ -41,17 +34,17 @@ function ContributorTable() {
   );
 
   return (
-    <div className="flex flex-col gap-4  p-6 rounded-xl">
+    <div className="flex flex-col gap-4 p-3 sm:p-6 rounded-xl w-full">
       {/* Tabs */}
-      <div className="flex gap-3 justify-center">
+      <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
         {["All", "Active", "Inactive"].map((filter) => (
           <button
             key={filter}
             onClick={() => {
               setActiveFilter(filter);
-              setCurrentPage(1); 
+              setCurrentPage(1);
             }}
-            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+            className={`px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base font-medium transition-colors ${
               activeFilter === filter
                 ? "bg-green-600 text-white"
                 : "bg-white border border-gray-300 hover:bg-green-100"
@@ -62,18 +55,18 @@ function ContributorTable() {
         ))}
       </div>
 
-      {/* Table */}
-      <div className="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
-        <table className="min-w-full">
+      {/* Table wrapper - this is the key fix */}
+      <div className="w-full overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
+        <table className="w-full min-w-[500px] table-auto">
           <thead className="bg-gray-100">
             <tr>
-              <th className="px-4 py-3 text-left font-semibold text-gray-800">
+              <th className="px-4 py-3 text-left font-semibold text-gray-800 whitespace-nowrap">
                 Name
               </th>
-              <th className="px-4 py-3 text-left font-semibold text-gray-800">
+              <th className="px-4 py-3 text-left font-semibold text-gray-800 whitespace-nowrap">
                 Role
               </th>
-              <th className="px-4 py-3 text-left font-semibold text-gray-800">
+              <th className="px-4 py-3 text-left font-semibold text-gray-800 whitespace-nowrap">
                 Status
               </th>
             </tr>
@@ -88,9 +81,9 @@ function ContributorTable() {
                     : ""
                 }
               >
-                <td className="px-4 py-3 text-gray-800">{c.name}</td>
-                <td className="px-4 py-3 text-gray-600">{c.role}</td>
-                <td className="px-4 py-3">
+                <td className="px-4 py-3 text-gray-800 whitespace-nowrap">{c.name}</td>
+                <td className="px-4 py-3 text-gray-600 whitespace-nowrap">{c.role}</td>
+                <td className="px-4 py-3 whitespace-nowrap">
                   {c.status === "Active" ? (
                     <span className="text-green-600 font-medium text-sm">
                       Active
@@ -117,7 +110,7 @@ function ContributorTable() {
 
       {/* Pagination Component */}
       {totalPages > 1 && (
-        <div className="flex justify-end">
+        <div className="flex justify-center sm:justify-end">
           <ContributorPaginattion
             currentPage={currentPage}
             totalPages={totalPages}
