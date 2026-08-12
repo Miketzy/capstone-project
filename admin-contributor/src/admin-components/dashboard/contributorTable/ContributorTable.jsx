@@ -21,11 +21,13 @@ function ContributorTable() {
   const [currentPage, setCurrentPage] = useState(1);
   const entriesPerPage = 5;
 
+  // Filter
   const filteredContributors =
     activeFilter === "All"
       ? contributors
       : contributors.filter((c) => c.status === activeFilter);
 
+  // Pagination logic
   const totalPages = Math.ceil(filteredContributors.length / entriesPerPage);
   const startIndex = (currentPage - 1) * entriesPerPage;
   const currentContributors = filteredContributors.slice(
@@ -34,7 +36,7 @@ function ContributorTable() {
   );
 
   return (
-    <div className="flex flex-col gap-4 p-3 sm:p-6 rounded-xl w-full">
+    <div className="w-full max-w-full overflow-x-hidden flex flex-col gap-4 p-3 sm:p-6 rounded-xl">
       {/* Tabs */}
       <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
         {["All", "Active", "Inactive"].map((filter) => (
@@ -55,7 +57,7 @@ function ContributorTable() {
         ))}
       </div>
 
-      {/* Table wrapper - this is the key fix */}
+      {/* Table */}
       <div className="w-full overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
         <table className="w-full min-w-[500px] table-auto">
           <thead className="bg-gray-100">
@@ -81,8 +83,12 @@ function ContributorTable() {
                     : ""
                 }
               >
-                <td className="px-4 py-3 text-gray-800 whitespace-nowrap">{c.name}</td>
-                <td className="px-4 py-3 text-gray-600 whitespace-nowrap">{c.role}</td>
+                <td className="px-4 py-3 text-gray-800 whitespace-nowrap">
+                  {c.name}
+                </td>
+                <td className="px-4 py-3 text-gray-600 whitespace-nowrap">
+                  {c.role}
+                </td>
                 <td className="px-4 py-3 whitespace-nowrap">
                   {c.status === "Active" ? (
                     <span className="text-green-600 font-medium text-sm">
@@ -110,13 +116,11 @@ function ContributorTable() {
 
       {/* Pagination Component */}
       {totalPages > 1 && (
-        <div className="flex justify-center sm:justify-end">
-          <ContributorPaginattion
-            currentPage={currentPage}
-            totalPages={totalPages}
-            setCurrentPage={setCurrentPage}
-          />
-        </div>
+        <ContributorPaginattion
+          currentPage={currentPage}
+          totalPages={totalPages}
+          setCurrentPage={setCurrentPage}
+        />
       )}
     </div>
   );
