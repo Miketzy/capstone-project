@@ -53,7 +53,7 @@ function Dashboard() {
 
       {/**In the Contributor Table, you can see whether a contributor is active or not. */}
 
-    
+      <ContributorTable />
     </div>
   );
 }
